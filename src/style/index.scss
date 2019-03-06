@@ -90,12 +90,72 @@ body {
         top: 0;
         width: 100vw;
         height: 70px;
+        .menu {
+            display: inline-block;
+            float: right;
+            a {
+                color: #606060;
+                text-decoration: none;
+                margin-right: 20px;
+            }
+        }
     }
     .content-wrapper {
         display: flex;
         height: calc(100vh - 70px - 55px);
         .feature-text-container {
             color: #606060;
+            margin-left: 80px;
+            .feature-text-line1 {
+                font-weight: 800;
+                font-size: 20px;
+                line-height: 0.5;
+                letter-spacing: normal;
+                font-stretch: condensed;
+            }
+            .feature-text-line2 {
+                font-weight: 800;
+                font-size: 33px;
+                line-height: 0.3;
+                letter-spacing: normal;
+                font-stretch: condensed;
+            }
+            .feature-text-line3 {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 0.8;
+                letter-spacing: 1.5px;
+                margin-top: 20px;
+            }
+            .feature-text-line4 {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 0.8;
+                letter-spacing: 1.5px;
+            }
+            hr {
+                border-top: 2px solid #606060;
+                width: 180px;
+                text-align: left;
+                margin: 0px;
+            }
+            button {
+                border-radius: 40px;
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+                background-color: #ffffff;
+                border: none;
+                padding: 12px 20px;
+                line-height: 1.23;
+                margin-top: 30px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.23;
+                letter-spacing: normal;
+                color: #606060;
+                cursor: pointer;
+                outline: 0;
+            }
         }
         .feature-img-container {
             .feature-img {

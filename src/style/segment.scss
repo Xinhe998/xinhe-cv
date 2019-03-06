@@ -1,6 +1,7 @@
 $segment-label-width: 80px;
 $segment-label-height: 22px;
-#radios {
+#segment {
+    display: inline-block;
     position: relative;
     z-index: 5;
     color: #606060;

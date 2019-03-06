@@ -7,7 +7,7 @@ class Segment extends React.Component {
     }
     render() {
         return (
-            <div id="radios">
+            <div id="segment">
                 <input id="seg1" type="radio" name="radioBtn" checked onChange={()=>{}} />
 
                 <label className="labels" htmlFor="seg1">EN</label>

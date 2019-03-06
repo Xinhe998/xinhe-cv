@@ -1,0 +1,86 @@
+$segment-label-width: 80px;
+$segment-label-height: 22px;
+#radios {
+    position: relative;
+    z-index: 5;
+    color: #606060;
+    font-size: 12px;
+    letter-spacing: 0.9px;
+    line-height: 1;
+    user-select: none;
+    -webkit-user-select: none;   /* for Chrome */
+    -moz-user-select: none;  /* for Firefox */ 
+
+    input[type="radio"] {
+        display: none;
+    }
+      
+    #bckgrnd,
+    label {
+        width: $segment-label-width;
+        height: $segment-label-height;
+        text-align: center;
+        display: inline-block;
+        padding-top: 10px;
+        margin-right: -3px;
+        z-index: 2;
+        cursor: pointer;
+        border: 3px solid white;
+    }
+    label {
+        &:first-of-type{
+            -webkit-transform: perspective(300px) rotateX(-30deg);
+            -o-transform: perspective(300px) rotateX(-30deg);
+            -moz-transform: perspective(300px) rotateX(-30deg);
+            -webkit-transform-origin: 0% 50%;
+            -moz-transform-origin: 0% 50%;
+            -o-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+            border-radius: 10px 0 0 10px;
+        }
+        &:last-of-type {
+            -webkit-transform: translatey(-1.5px) perspective(300px) rotateX(30deg);
+            -o-transform: translatey(-1.5px) perspective(300px) rotateX(30deg);
+            -moz-transform: translatey(-1.5px) perspective(300px) rotateX(30deg);
+            -webkit-transform-origin: 100% 50%;
+            -moz-transform-origin: 100% 50%;
+            -o-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+            border-radius: 0 10px 10px 0;
+        }
+    }
+    #bckgrnd {
+        height: $segment-label-height;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+      
+    #seg1:checked ~ #bckgrnd {
+        transition: all 0.1s ease-in-out;
+        -webkit-transform: translateX(0) perspective(300px) rotateX(-30deg);
+        -o-transform: translateX(0) perspective(300px) rotateX(-30deg);
+        -moz-transform:  translateX(0) perspective(300px) rotateX(-30deg);
+        -webkit-transform-origin: 0% 50%;
+        -moz-transform-origin: 0% 50%;
+        -o-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+        border-radius: 10px 0 0 10px;
+    }
+    #seg2:checked ~ #bckgrnd {
+        transition: all 0.1s ease-in-out;
+        -webkit-transform: translatey(-1.5px) translateX($segment-label-width ) perspective(300px) rotateX(30deg);
+        -o-transform: translatey(-1.5px) translateX($segment-label-width ) perspective(300px) rotateX(30deg);
+        -moz-transform: translatey(-1.5px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
+        -webkit-transform-origin: 100% 50%;
+        -moz-transform-origin: 100% 50%;
+        -o-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        border-radius: 0 10px 10px 0;
+    }
+
+}
+  
+ 

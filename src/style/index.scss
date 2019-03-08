@@ -85,7 +85,7 @@ $phones-media:479px;
 body {
     background: #f4f4fa;
     margin: 0;
-    // overflow: hidden;
+    overflow: hidden;
     font-family: gordita,Helvetica Neue,Helvetica,sans-serif;
     .header {
         position: relative;
@@ -103,6 +103,11 @@ body {
                 color: #606060;
                 text-decoration: none;
                 margin-left: 50px;
+                opacity: .6;
+                transition: all .3s;
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
     }

@@ -38,9 +38,7 @@ class Home extends React.Component {
                     </div>
                     <div className="feature-img-container">
                         <img src={FeatureImg} />
-                        
-                            <Code />
-                        
+                        <Code />
                     </div>
                 </div>
                 <div className="foo">

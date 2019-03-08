@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from 'prop-types';
 import '../style/segment.scss'
 
 class Segment extends React.Component {
@@ -7,7 +8,7 @@ class Segment extends React.Component {
     }
     render() {
         return (
-            <div id="segment">
+            <div id="segment" className={this.props.isInSidebar? 'is_in_sidebar' : '' }>
                 <input id="seg1" type="radio" name="radioBtn" checked onChange={()=>{}} />
 
                 <label className="labels" htmlFor="seg1">EN</label>
@@ -20,5 +21,8 @@ class Segment extends React.Component {
             </div> 
         )
     }
+}
+Segment.propTypes = {
+    isInSidebar: PropTypes.bool
 }
 export default (Segment)

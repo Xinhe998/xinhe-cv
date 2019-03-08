@@ -1,0 +1,102 @@
+
+#sidebar {
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    position: fixed;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    // left: -250px;
+    width: 250px;
+    height: 100vh;
+    left: 0;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.16);
+    background-image: linear-gradient(to bottom, rgba(129, 160, 193, 0.64), rgba(178, 118, 131, 0.56));
+    text-align: center;
+    padding-top: 30px;
+    position: relative;
+    display: inline-block;
+    float: left;
+    #segment {
+        color: white;
+        letter-spacing: 0.9px;
+        font-weight: normal;
+
+        input:checked + label {
+            color: #606060;
+        }
+    }
+    .text-container {
+        color: white;
+        margin-top: 80px;
+        p:first-of-type {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: .5;
+            letter-spacing: normal;
+        }
+        p:nth-child(2) {
+            font-size: 30px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: condensed;
+            line-height: .5;
+            letter-spacing: normal;
+        }
+        p:last-of-type {
+            font-size: 15px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: condensed;
+            line-height: 0.5;
+            letter-spacing: normal;
+        }
+    }
+    .button-container {
+        padding: 0 50px;
+        margin-top: 50px;
+        a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.13;
+            letter-spacing: .9px;
+            padding: 10px 0;
+            margin-bottom: 10px;
+            &.active {
+                border-radius: 50px;
+                -webkit-backdrop-filter: blur(9px);
+                backdrop-filter: blur(9px);
+                background-color: #ffffff;
+                color: #606060;
+            }
+        }
+    }
+    .socialmedia-button-container {
+        border-radius: 50px;
+        -webkit-backdrop-filter: blur(9px);
+        backdrop-filter: blur(9px);
+        background-color: rgba(198, 208, 235, 0.32);
+        margin: 0 10px;
+        position: absolute;
+        padding: 0 45px;
+        bottom: 8%;
+        img {
+            width: 25px;
+            padding: 5px 10px;
+            transition: all .2s;
+        }
+        .icon-container:hover img:not(:hover) {
+            opacity: .5;
+        }
+    }
+}

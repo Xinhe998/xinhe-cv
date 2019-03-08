@@ -1,13 +1,36 @@
-$segment-label-width: 80px;
-$segment-label-height: 22px;
+
 #segment {
+    $segment-label-width: 80px;
+    $segment-label-height: 22px;
+    $segment-font-size: 12px;
+    $segment-line-height: 1;
+
+    &.is_in_sidebar {
+        $segment-label-width: 80px;
+        $segment-label-height: 16px;
+        $segment-font-size: 8px;
+        $segment-line-height: .6;
+        label {
+            &:first-of-type{
+                -webkit-transform: perspective(300px) rotateX(-30deg) translateY(-1px);
+                -o-transform: perspective(300px) rotateX(-30deg) translateY(-1px);
+                -moz-transform: perspective(300px) rotateX(-30deg) translateY(-1px);
+            }
+            #seg1:checked ~ #bckgrnd {
+                -webkit-transform: translateX(0) perspective(300px) rotateX(-30deg) scaleY(0.7) translateY(-1.5px);
+                -o-transform: translateX(0) perspective(300px) rotateX(-30deg) scaleY(0.7) translateY(-1.5px);
+                -moz-transform:  translateX(0) perspective(300px) rotateX(-30deg) scaleY(0.7) translateY(-1.5px);
+            }
+        }
+    }
+
     display: inline-block;
     position: relative;
     z-index: 5;
     color: #606060;
-    font-size: 12px;
+    font-size: $segment-font-size;
     letter-spacing: 0.9px;
-    line-height: 1;
+    line-height: $segment-line-height;
     user-select: none;
     -webkit-user-select: none;   /* for Chrome */
     -moz-user-select: none;  /* for Firefox */ 
@@ -72,8 +95,8 @@ $segment-label-height: 22px;
     }
     #seg2:checked ~ #bckgrnd {
         transition: all 0.1s ease-in-out;
-        -webkit-transform: translatey(-1.5px) translateX($segment-label-width ) perspective(300px) rotateX(30deg);
-        -o-transform: translatey(-1.5px) translateX($segment-label-width ) perspective(300px) rotateX(30deg);
+        -webkit-transform: translatey(-1.5px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
+        -o-transform: translatey(-1.5px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
         -moz-transform: translatey(-1.5px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
         -webkit-transform-origin: 100% 50%;
         -moz-transform-origin: 100% 50%;

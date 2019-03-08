@@ -1,7 +1,136 @@
+body:has(#work-page) {
+    overflow: hidden;
+}
 #work-page {
     padding: 40px 36px;
+    overflow: auto;
     .timeline-blocks-container {
         position: relative;
-        
+        border-left: 2.5px solid #dedede;
+        margin-top: 50px;
+        padding-left: 15px;
+        .timeline-milestone {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        .timeline-date {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: .8;
+            letter-spacing: 1.5px;
+            text-align: left;
+            color: #919191;
+            width: 8%;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: right;
+            padding-right: 30px;
+            word-break: keep-all;
+        }
+        .timeline-content {
+            width: calc(88% - 40px);
+            display: inline-block;
+            border-radius: 10px;
+            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+            box-shadow: 7px 15px 20px 0 rgba(0, 0, 0, 0.03);
+            background-color: #ffffff;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: all .5s;
+            padding-left: 35px;
+            padding-top: 20px;
+            overflow: hidden;
+            padding-bottom: 40px;
+            
+            &:before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                background: #ecdbdb;
+                position: absolute;
+                left: -6.5px;
+                margin-top: 120px;
+                border-radius: 100%;
+            }
+            &:hover {
+                background-color: rgba(255,255,255,.3);
+            }
+
+            .project-img {
+                width: 150px;
+                height: 150px;
+                clip-path: circle(65px at center);
+                display: inline-block;
+                margin-right: 32px;
+                box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.16);
+                vertical-align: middle;
+            }
+            .project-desc-container {
+                display: inline-block;
+                color: #606060;
+                vertical-align: middle;
+                word-break: break-all;
+                word-wrap: normal;
+                max-width: calc(70% - 50px);
+                div {
+                    margin-top: 10px;
+                }
+                .project-title {
+                    font-weight: bold;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 2.2;
+                    letter-spacing: 1.7px;
+                    text-align: left;
+                }
+                .project-desc {
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: .8;
+                    letter-spacing: 1.7px;
+                    text-align: left;
+                }
+                .project-detail {
+                    font-size: 6px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: 0.9px;
+                    margin-top: 25px;
+
+                    .project-role-title {
+                        display: inline-block;
+                    }
+                    label.role {
+                        border-radius: 50px;
+                        -webkit-backdrop-filter: blur(9px);
+                        backdrop-filter: blur(9px);
+                        background-color: rgba(217, 223, 242, 0.75);
+                        padding: 9px 18px;
+                        display: inline-block;
+                        margin: 0 5px;
+                        margin-bottom: 10px;
+                    }
+                    label.programming_language {
+                        border-radius: 50px;
+                        -webkit-backdrop-filter: blur(9px);
+                        backdrop-filter: blur(9px);
+                        background-color: rgba(230, 207, 207, 0.75);
+                        padding: 7px 15px;
+                        display: inline-block;
+                        margin: 0 5px;
+                        color: #ffffff;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
     }
 }

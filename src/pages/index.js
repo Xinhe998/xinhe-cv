@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import PageTransition from 'gatsby-plugin-page-transitions';
 
 import Segment from '../components/Segment'
 import Code from '../components/Code'
@@ -19,7 +18,7 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-            <PageTransition
+            {/* <PageTransition
                 defaultStyle={{
                     transition: 'opacity 1000ms ease-in',
                     opacity: 0,
@@ -31,7 +30,7 @@ class Home extends React.Component {
                     exiting: { opacity: 0 },
                 }}
                 transitionTime={1000}
-            >
+            > */}
                     <div className="header">
                         <Segment />
                         <div className="menu">
@@ -69,7 +68,7 @@ class Home extends React.Component {
                             </a>
                         </div>
                     </div>
-            </PageTransition>
+            {/* </PageTransition> */}
                 </div>
         )
     }

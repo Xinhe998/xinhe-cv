@@ -53,7 +53,7 @@ class Ghowa extends React.Component {
                     <div id="work-detail-container" onScroll={this.listenScrollEvent.bind(this)}>
                         <PageTransition
                             defaultStyle={{
-                                transition: 'opacity 800ms ease-in',
+                                transition: 'opacity 500ms ease-in',
                                 opacity: 0,
                                 width: '100%',
                             }}
@@ -62,7 +62,7 @@ class Ghowa extends React.Component {
                                 entered: { opacity: 1 },
                                 exiting: { opacity: 0 },
                             }}
-                            transitionTime={800}
+                            transitionTime={500}
                         >
                             <img src={ghowa} className="project-img" />
                             <div className="project-desc-container">

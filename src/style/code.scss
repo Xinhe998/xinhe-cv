@@ -11,6 +11,15 @@
         background: white;
         border-radius: 20px 20px 0 0;
         position: relative;
+        justify-content: flex-start;
+        padding-left: 20px;
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #bfbfbf;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
     }
     .content {
         // padding: 30px;

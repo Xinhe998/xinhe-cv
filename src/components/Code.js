@@ -8,7 +8,11 @@ class Code extends React.Component {
     render() {
         return (
             <div id="code-feature-section">
-                <div className="header"></div>
+                <div className="header">
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                </div>
                 <div className="content">
                     <div className="block block1"></div>
                     <div className="block block2"></div>

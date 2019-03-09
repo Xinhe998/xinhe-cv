@@ -21,7 +21,7 @@
             background-image: linear-gradient(90deg, rgba(141, 125, 138, 0.27) 0px, rgba(141, 125, 138, 0.1) 40px, rgba(141, 125, 138, 0.27) 80px);
             position: relative;
             margin: 0 10px;
-            animation: shine-lines 1.6s infinite linear;
+            animation: shine-lines 1.6s 3 linear;
 
             &.block1 {
                 height: 30px;
@@ -69,6 +69,15 @@
             flex-direction: column;
             align-items: center;
             top: 0;
+            opacity: 0;
+            -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+            -moz-animation: fadein 2s; /* Firefox < 16 */
+            -ms-animation: fadein 2s; /* Internet Explorer */
+            -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;  
+                 
             p {
                 top: 40%;
                 margin: 0px 0;
@@ -93,4 +102,8 @@
     100% {
         background-position: 180px + 68;
     }
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

@@ -1,0 +1,98 @@
+#work-detail-container {
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 7px 15px 20px 0 rgba(0, 0, 0, 0.03);
+    background-color: #ffffff;
+    margin: 25px 28px 0px;
+    padding: 38px 36px 38px;
+    overflow: hidden;
+    
+    .sticky {
+        position: fixed;
+        top: 0;
+        box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+        width: 100%;
+        left: calc(250px + 28px);
+        margin: 0;
+        width: calc(100vw - 250px - 56px);
+        transition: all .02s;
+        .project-title {
+            text-align: center;
+        }
+        .close-btn {
+            top: 5px;
+        }
+        & ~ .project-detail_content {
+            padding-top: 200px;
+        }
+    }
+    .close-btn {
+        right: 60px;
+        top: 45px;
+        width: 32px;
+        height: 32px;
+        opacity: 0.6;
+        position: absolute;
+        cursor: pointer;
+        background-image: linear-gradient(to bottom, #f1f9ff, #e2e7f5 3%, #ecdbdb);
+        border-radius: 50%;
+        transition: all .5s;
+        &:before, &:after {
+            position: absolute;
+            left: 15px;
+            top: 6px;
+            content: ' ';
+            height: 20px;
+            width: 2px;
+            background-image: linear-gradient(to bottom, #696a6a, #353535);
+
+          }
+          &:before {
+            transform: rotate(45deg);
+          }
+          &:after {
+            transform: rotate(-45deg);
+          }
+          &:hover {
+              opacity: 1;
+          }
+    }
+    .project-img {
+        margin-right: 50px;
+    }
+    .project-detail_content {
+        margin-top: 38px;
+        // transition: all .2s;
+        h1 {
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.79;
+            letter-spacing: 1.7px;
+            text-align: left;
+            color: #606060;
+            margin-top: 40px;
+        }
+        p {
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 2.5;
+            letter-spacing: 1.2px;
+            text-align: left;
+            color: #606060;
+
+        }
+        .image-group {
+            img {
+                display: inline-block;
+                width: 20%;
+                margin-right: 30px;
+            }
+        }
+    }
+}

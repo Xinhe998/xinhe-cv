@@ -17,11 +17,11 @@ class Sidebar extends React.Component {
                 <Segment isInSidebar={true} />
                 <div className="text-container">
                     <p>Hi, I’m</p>
-                    <p>Xinhe Hsu</p>
+                    <p><Link to="/">Xinhe Hsu</Link></p>
                     <p>Developer</p>
                 </div>
                 <div className="button-container">
-                    <Link to="work" activeClassName='active'>Work</Link>
+                    <Link to="works" activeClassName='active'>Work</Link>
                     <Link to="about" activeClassName='active'>About</Link>
                     <Link to="resume" activeClassName='active'>Resume</Link>
                 </div>

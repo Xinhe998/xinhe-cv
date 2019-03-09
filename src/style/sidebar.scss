@@ -59,6 +59,10 @@
             line-height: 0.5;
             letter-spacing: normal;
         }
+        a {
+            text-decoration: none;
+            color: white;
+        }
     }
     .button-container {
         padding: 0 50px;
@@ -75,12 +79,14 @@
             letter-spacing: .9px;
             padding: 10px 0;
             margin-bottom: 10px;
+            transition: all .5s;
             &.active {
                 border-radius: 50px;
                 -webkit-backdrop-filter: blur(9px);
                 backdrop-filter: blur(9px);
                 background-color: #ffffff;
                 color: #606060;
+                transition: all .5s;
             }
         }
     }
@@ -88,11 +94,11 @@
         border-radius: 50px;
         -webkit-backdrop-filter: blur(9px);
         backdrop-filter: blur(9px);
-        background-color: rgba(198, 208, 235, 0.32);
+        background-color: rgba(198, 208, 235, 0.3);
         margin: 0 10px;
         position: absolute;
         padding: 0 45px;
-        bottom: 8%;
+        bottom: 5%;
         img {
             width: 25px;
             padding: 5px 10px;

@@ -8,7 +8,7 @@ module.exports = {
             },
             {
                 name: 'Work',
-                link: '/work'
+                link: '/works'
             },
             {
                 name: 'About',
@@ -17,7 +17,13 @@ module.exports = {
         ]
     },
     plugins: [
-        `gatsby-plugin-sass`,
+        'gatsby-plugin-sass',
+        {
+            resolve: 'gatsby-plugin-page-transitions',
+            options: {
+                transitionTime: 500
+            }
+        }
     ],
 
 }

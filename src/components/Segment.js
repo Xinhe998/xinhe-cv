@@ -7,7 +7,7 @@ class Segment extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            lang: localStorage.getItem('i18nextLng') ? localStorage.getItem('i18nextLng') : 'en'
+            lang: typeof localStorage !== 'undefined' && localStorage.getItem('i18nextLng') ? localStorage.getItem('i18nextLng') : 'en'
         }
     }
     handleChange = (lang) => {

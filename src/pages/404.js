@@ -1,7 +1,8 @@
 import React from 'react';
 
-export default function NotFound() {
-  window.location = '/';
+const NotFound = () => {
+//   typeof window !== 'undefined' ? window.location = '/' : {};
 
   return null;
 }
+export default NotFound;

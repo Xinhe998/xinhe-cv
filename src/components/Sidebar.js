@@ -21,8 +21,8 @@ class Sidebar extends React.Component {
                     <p>Developer</p>
                 </div>
                 <div className="button-container">
-                    <Link to="works" className={window.location.pathname.includes('works') ? 'active' : ''}>WORK</Link>
-                    <Link to="about" className={window.location.pathname.includes('about') ? 'active' : ''}>ABOUT</Link>
+                    <Link to="works" className={typeof window !== 'undefined' && window.location.pathname.includes('works') ? 'active' : ''}>WORK</Link>
+                    <Link to="about" className={typeof window !== 'undefined' && window.location.pathname.includes('about') ? 'active' : ''}>ABOUT</Link>
                     <Link to="resume" >RESUME</Link>
                 </div>
                 <div className="socialmedia-button-container">

@@ -20,22 +20,14 @@ module.exports = {
     plugins: [
         'gatsby-plugin-sass',
         'gatsby-plugin-offline',
-        //   {
-        //     resolve: `gatsby-plugin-i18next`,
-        //     options: {
-        //       availableLngs: ['en', 'zh-tw'],
-        //       fallbackLng: 'en',
-        //       saveMissing: true,
-        //       debug: true,
-        //     },
-        //   },
-          {
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
-              path: `./src/Assets`,
-              name: `images`,
+                path: `${__dirname}/locale`,
+                name: `locale`,
             },
-          },
+        }
+        
     ],
 
 }

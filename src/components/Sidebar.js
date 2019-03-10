@@ -21,9 +21,9 @@ class Sidebar extends React.Component {
                     <p>Developer</p>
                 </div>
                 <div className="button-container">
-                    <Link to="works" activeClassName='active'>WORK</Link>
-                    <Link to="about" activeClassName='active'>ABOUT</Link>
-                    <Link to="resume" activeClassName='active'>RESUME</Link>
+                    <Link to="works" className={window.location.pathname.includes('works') ? 'active' : ''}>WORK</Link>
+                    <Link to="about" className={window.location.pathname.includes('about') ? 'active' : ''}>ABOUT</Link>
+                    <Link to="resume" >RESUME</Link>
                 </div>
                 <div className="socialmedia-button-container">
                     <div className="icon-container">

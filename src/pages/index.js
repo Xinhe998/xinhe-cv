@@ -19,7 +19,7 @@ class Home extends React.Component {
         return (
             <div id="home-page">
                     <div className="header">
-                        <Segment />
+                        {/* <Segment /> */}
                         <div className="menu">
                             <Link to="works">Work</Link>
                             <Link to="about">About</Link>

@@ -103,10 +103,8 @@ body {
         padding-right: 80px;   //網頁邊界
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-end;
         .menu {
-            float: right;
-            right: 0;
             a {
                 color: #606060;
                 text-decoration: none;

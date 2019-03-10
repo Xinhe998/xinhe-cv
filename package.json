@@ -17,6 +17,7 @@
     "gatsby": "^2.1.22",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-i18next": "^1.1.7",
+    "gatsby-plugin-offline": "^2.0.24",
     "gatsby-plugin-sass": "^2.0.10",
     "gatsby-source-filesystem": "^2.0.23",
     "i18next": "^15.0.6",

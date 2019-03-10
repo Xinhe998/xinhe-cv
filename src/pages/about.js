@@ -4,6 +4,8 @@ import Layout from "../components/Layout"
 import '../style/about.scss'
 import avatar from '../Assets/avatar.jpg'
 
+import advantch_pic from '../Assets/advantech_pic.jpg'
+
 class About extends React.Component {
     constructor(props) {
         super(props)
@@ -45,6 +47,55 @@ class About extends React.Component {
                             <label className="pink">MySQL</label>
                         </div>
                         <h1>Experience</h1>
+                        <ul className="timeline-container">
+                            <li className="timeline-milestone">
+                                <div className="timeline-date">
+                                    <p>2018/01 - 2018/07</p>
+                                </div>
+                                <div className="timeline-content">
+                                    Intern <b>@ Advantech</b>
+                                    <ul>
+                                        <li>Responsible for developing and maintaining Marketplace project with ASP.NETMVC5. </li>
+                                        <li>Successfully imported Coded UI Test with Selenium and completed CI process on myown in a week. </li>
+                                        <li>Shared UI Test experience on technical conferences with IT colleagues and QAcolleagues who is work in Kunshan, China. </li>
+                                    </ul>
+                                    <div className="image-hover img-zoom-in">
+                                        <a href="https://medium.com/@xinhe998/advantech-internship-f4ba6a13acf6" target="_blank">
+                                            <img src={advantch_pic} />
+                                        </a>
+                                    </div>
+                                    <div className="bubble_wrapper">
+                                        <div className="bubble">Medium Article :<br />What I Learn From Advantech IOT Internship</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="timeline-milestone">
+                                <div className="timeline-date">
+                                    <p>2017/07 - 2018/01</p>
+                                </div>
+                                <div className="timeline-content">
+                                    Intern <b>@ Trunk Studio</b>
+                                    <ul>
+                                        <li>Participation of ‘VIPT JOB’ official website(job bank platform for migrant workers and enterprise) development with Vue.js and EJS, also helped to implement i18n. </li>
+                                        <li>Participation of ‘Kbro HealthCare’ mobile app development with React Native. </li>
+                                        <li>Familiar with Git, JavaScript, React, EJS. </li>
+                                        <li>Familiar working in Scrum.</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li className="timeline-milestone">
+                                <div className="timeline-date">
+                                    <p>2017/01 - 2017/03</p>
+                                </div>
+                                <div className="timeline-content">
+                                    Intern <b>@ Taiwan Cloud</b>
+                                    <ul>
+                                        <li>Participation of online ERP system project development with HTML, CSS, jQuery, ASP.NET MVC5. </li>
+                                        <li>Familiar with ASP.NET MVC 5 and jQuery. </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </Layout>

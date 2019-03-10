@@ -19,6 +19,7 @@ module.exports = {
     },
     plugins: [
         'gatsby-plugin-sass',
+        'gatsby-plugin-offline',
         //   {
         //     resolve: `gatsby-plugin-i18next`,
         //     options: {
@@ -28,13 +29,13 @@ module.exports = {
         //       debug: true,
         //     },
         //   },
-        //   {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //       path: `./src/locales`,
-        //       name: `locale`,
-        //     },
-        //   },
+          {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+              path: `./src/Assets`,
+              name: `images`,
+            },
+          },
     ],
 
 }

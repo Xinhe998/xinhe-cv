@@ -1,4 +1,5 @@
 module.exports = {
+    pathPrefix: '/docs',
     siteMetadata: {
         title: 'Xinhe Hsu',
         menuLinks: [

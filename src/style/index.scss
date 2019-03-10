@@ -80,13 +80,21 @@ $phones-media:479px;
   }
 
   
-  
-  
 body {
     background: #f4f4fa;
     margin: 0;
     // overflow: hidden;
     font-family: gordita,Helvetica Neue,Helvetica,sans-serif;
+    #home-page {
+        opacity: 0;
+        -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein .5s; /* Firefox < 16 */
+        -ms-animation: fadein .5s; /* Internet Explorer */
+        -o-animation: fadein .5s; /* Opera < 12.1 */
+        animation: fadein .5s;
+        animation-delay: .4s;
+        animation-fill-mode: forwards;  
+    }
     .header {
         position: relative;
         top: 0;
@@ -273,4 +281,20 @@ body {
             opacity: .5;
         }
     }
+}
+@-webkit-keyframes fadein {
+	from {
+        opacity: 0;
+	}
+	to {
+        opacity: 1;
+	}
+}
+@keyframes fadein {
+	from {
+        opacity: 0;
+	}
+	to {
+        opacity: 1;
+	}
 }

@@ -17,20 +17,7 @@ class Home extends React.Component {
     }
     render() {
         return (
-            <div>
-            {/* <PageTransition
-                defaultStyle={{
-                    transition: 'opacity 1000ms ease-in',
-                    opacity: 0,
-                    width: '100%',
-                }}
-                transitionStyles={{
-                    entering: { opacity: 1 },
-                    entered: { opacity: 1 },
-                    exiting: { opacity: 0 },
-                }}
-                transitionTime={1000}
-            > */}
+            <div id="home-page">
                     <div className="header">
                         <Segment />
                         <div className="menu">
@@ -68,7 +55,6 @@ class Home extends React.Component {
                             </a>
                         </div>
                     </div>
-            {/* </PageTransition> */}
                 </div>
         )
     }

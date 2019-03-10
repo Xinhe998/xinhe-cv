@@ -1,7 +1,9 @@
 import React from "react"
 import Layout from "../../components/Layout"
+// import '../../I18n';
 import { Link } from "gatsby"
 
+// import { useTranslation } from 'react-i18next';
 
 import '../../style/work.scss'
 import meracle from '../../Assets/image-5.png'
@@ -14,7 +16,10 @@ class Work extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            active1: false
+            active1: false,
+            active2: false,
+            active3: false,
+            active4: false
         }
     }
     onChangeVisibility1 = isActive => {
@@ -30,6 +35,7 @@ class Work extends React.Component {
         this.setState({ active4: isActive });
     };
     render() {
+        // const { t, i18n } = useTranslation();
         return (
             <Layout>
                 <div id="work-page">
@@ -38,14 +44,14 @@ class Work extends React.Component {
                     <p className="page-desc">I spent most of the time on web development.</p>
                     <ul className="timeline-blocks-container">
 
-                        <VisibilitySensor  offset={{top:-200}} partialVisibility={true}  onChange={this.onChangeVisibility4} active={!this.state.active4}>
+                        <VisibilitySensor offset={{ top: -200 }} partialVisibility={true} onChange={this.onChangeVisibility4} active={!this.state.active4}>
                             {({ isVisible }) => {
                                 return (
                                     <li className="timeline-milestone">
 
                                         <div className={isVisible ? 'timeline-date in_viewport' : 'timeline-date'}>
                                             <p>11/2018</p>
-                                            <p>- Present</p>
+                                            <p>- present</p>
                                         </div>
                                         <Link to={this.props.location.pathname + '/ghowa'}>
                                             <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
@@ -73,7 +79,7 @@ class Work extends React.Component {
                                 )
                             }}
                         </VisibilitySensor>
-                        <VisibilitySensor  offset={{top:-200}} partialVisibility={true}  onChange={this.onChangeVisibility3} active={!this.state.active3}>
+                        <VisibilitySensor offset={{ top: -200 }} partialVisibility={true} onChange={this.onChangeVisibility3} active={!this.state.active3}>
                             {({ isVisible }) => {
                                 return (
                                     <li className="timeline-milestone">
@@ -106,7 +112,7 @@ class Work extends React.Component {
                                 )
                             }}
                         </VisibilitySensor>
-                        <VisibilitySensor offset={{top:-200}} partialVisibility={true} onChange={this.onChangeVisibility2} active={!this.state.active2}>
+                        <VisibilitySensor offset={{ top: -200 }} partialVisibility={true} onChange={this.onChangeVisibility2} active={!this.state.active2}>
                             {({ isVisible }) => {
                                 return (
                                     <li className="timeline-milestone">
@@ -138,7 +144,7 @@ class Work extends React.Component {
                                 )
                             }}
                         </VisibilitySensor>
-                        <VisibilitySensor offset={{top:-200}} partialVisibility={true}  onChange={this.onChangeVisibility1} active={!this.state.active1}>
+                        <VisibilitySensor offset={{ top: -200 }} partialVisibility={true} onChange={this.onChangeVisibility1} active={!this.state.active1}>
                             {({ isVisible }) => {
                                 return (
                                     <li className="timeline-milestone">
@@ -180,4 +186,4 @@ class Work extends React.Component {
     }
 }
 
-export default (Work);
+export default Work;

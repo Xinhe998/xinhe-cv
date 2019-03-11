@@ -17,11 +17,11 @@
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd cv/
+    cd xinhe-cv/
     gatsby develop
     ```
 
 1.  **Open the source code and start editing!**
 
-    My site is now running at `http://localhost:8000`!
+    Xinhe's cv site is now running at `http://localhost:8000`!
 

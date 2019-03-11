@@ -7,6 +7,7 @@
 <h1 align="center">
   Xinhe Hsu's Personal Website
 </h1>
+<img src="./screenshot.png">
 
 
 ## 🚀 Quick start

@@ -7,6 +7,7 @@ import '../../style/work_detail.scss'
 import ghowa from '../../Assets/ghowa_feature_img.png'
 import ghowa_app_1 from '../../Assets/ghowa-app-1.png'
 import ghowa_app_2 from '../../Assets/ghowa-app-2.png'
+import ghowa_wireframe from '../../Assets/ghowa-wireframe.png'
 
 
 class Ghowa extends React.Component {
@@ -15,54 +16,36 @@ class Ghowa extends React.Component {
         this.handleScroll = this.listenScrollEvent.bind(this);
     }
     componentDidMount() {
+        
         window.addEventListener('scroll', this.listenScrollEvent, true);
+
     }
     componentWillUnmount() {
         window.removeEventListener('scroll', this.listenScrollEvent, true);
+        var container = document.getElementById("work-detail-container");
+        container.classList.remove("notransition");
     }
     listenScrollEvent = () => {
+        var container = document.getElementById("work-detail-container");
+
         var header = document.getElementById("be-header-when-scroll");
         var sticky = document.querySelector(".project-desc-container").offsetTop;
         var h = document.querySelector(".project-desc-container").offsetHeight;
-
+        
         if (window.pageYOffset > (sticky + h)) {
+            container.classList.add("notransition");
             header.classList.add("sticky");
-            document.querySelector(".project-detail_content").style.marginTop = '150px';
+            // document.querySelector(".project-detail_content").style.marginTop = '150px';
         } else {
             header.classList.remove("sticky");
-            document.querySelector(".project-detail_content").style.marginTop = '38px';
+            // document.querySelector(".project-detail_content").style.marginTop = '38px';
         }
     }
     render() {
         return (
             <Layout>
-                {/* <PageTransition
-                    defaultStyle={{
-                        transition: 'transform 300ms ease-in',
-                        transform: 'scale(0.5)',
-                    }}
-                    transitionStyles={{
-                        entering: { transform: 'scale(1)' },
-                        entered: { transform: 'scale(1)' },
-                        exiting: { transform: 'scale(0.5)' },
-                    }}
-                    transitionTime={300}
-                > */}
-                
                     <div id="work-detail-container" onScroll={this.listenScrollEvent.bind(this)}>
-                        {/* <PageTransition
-                            defaultStyle={{
-                                transition: 'opacity 500ms ease-in',
-                                opacity: 0,
-                                width: '100%',
-                            }}
-                            transitionStyles={{
-                                entering: { opacity: 1 },
-                                entered: { opacity: 1 },
-                                exiting: { opacity: 0 },
-                            }}
-                            transitionTime={500}
-                        > */}
+                       
                         <img src={ghowa} className="project-img" />
                         <div className="project-desc-container">
                             <div id="be-header-when-scroll">
@@ -70,7 +53,7 @@ class Ghowa extends React.Component {
                                 <p className="project-title">Ghowa</p>
                             </div>
 
-                            <p className="project-desc">An app for splitting a bill with friends</p>
+                            <p className="project-desc">An app helps to easily settle expenses with a group of people. </p>
                             <div className="project-detail">
                                 <div>
                                     <p className="project-role-title">Role:</p>
@@ -86,14 +69,21 @@ class Ghowa extends React.Component {
                         </div>
                         <div className="project-detail_content">
                             <h1>Project Overview</h1>
-                            <p>Cross-school cooperation for the Undergraduate Research Project in NTUE.</p>
+                            <p>Cross-school cooperation for the Undergraduate Research Project in NTUE</p>
+                            <p>Now is in Progress</p>
+                            <h1>Project Brief</h1>
+                            <p>Ghowa is an <b>app that calculates a balance of a group of people who spend money and want to calculate a balance for each participant. </b>
+                                It allows user to create infinite groups for managing a list with the shared expenses.<br />
+                                In this project, I collaborated with people from NTUE (National Taipei University of Education Department) of Digital Technology Design to ideate the solution
+                                 and was individually responsible for building the REST API with Node.js and Express.js</p>
                             <h1>At a Glance</h1>
+                            <p>From wireframe to mock-up.</p>
                             <div className="image-group">
+                            <img src={ghowa_wireframe} />
                                 <img src={ghowa_app_1} />
                                 <img src={ghowa_app_2} />
                             </div>
                         </div>
-                        {/* </PageTransition> */}
                     </div>
                
             </Layout>

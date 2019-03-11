@@ -6,8 +6,10 @@ import { Link } from "gatsby"
 // import { useTranslation } from 'react-i18next';
 
 import '../../style/work.scss'
-import meracle from '../../Assets/image-5.png'
+import meracle from '../../Assets/meracle.png'
 import ghowa from '../../Assets/ghowa_feature_img.png'
+import here from '../../Assets/here.png'
+import bonerp from '../../Assets/bonerp.png'
 
 
 const VisibilitySensor = require('react-visibility-sensor').default
@@ -58,7 +60,7 @@ class Work extends React.Component {
                                                 <img src={ghowa} className="project-img" />
                                                 <div className="project-desc-container">
                                                     <p className="project-title">Ghowa</p>
-                                                    <p className="project-desc">An app for splitting a bill with friends</p>
+                                                    <p className="project-desc">An app helps to easily settle expenses with a group of people</p>
                                                     <div className="project-detail">
                                                         <div>
                                                             <p className="project-role-title">Role:</p>
@@ -84,30 +86,32 @@ class Work extends React.Component {
                                 return (
                                     <li className="timeline-milestone">
                                         <div className={isVisible ? 'timeline-date in_viewport' : 'timeline-date'}>
-                                            <p>07/2017</p>
+                                            <p>08/2017</p>
                                             <p>- 12/2017</p>
                                         </div>
-                                        <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
-                                            <img src={meracle} className="project-img" />
-                                            <div className="project-desc-container">
-                                                <p className="project-title">Meracle</p>
-                                                <p className="project-desc">學童腦波記憶力評估訓練系統</p>
-                                                <div className="project-detail">
-                                                    <div>
-                                                        <p className="project-role-title">Role:</p>
-                                                        <label className="role">Web Front-End Develop</label>
-                                                    </div>
-                                                    <div>
-                                                        <p className="project-program-title">Programming Languages：</p>
-                                                        <label className="programming_language">React.js</label>
-                                                        <label className="programming_language">Redux</label>
-                                                        <label className="programming_language">SCSS</label>
-                                                        <label className="programming_language">JavaScript</label>
-                                                        <label className="programming_language">Webpack</label>
+                                        <Link to={this.props.location.pathname + '/meracle'}>
+                                            <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
+                                                <img src={meracle} className="project-img" />
+                                                <div className="project-desc-container">
+                                                    <p className="project-title">Meracle</p>
+                                                    <p className="project-desc">學童腦波記憶力評估訓練系統</p>
+                                                    <div className="project-detail">
+                                                        <div>
+                                                            <p className="project-role-title">Role:</p>
+                                                            <label className="role">Web Front-End Develop</label>
+                                                        </div>
+                                                        <div>
+                                                            <p className="project-program-title">Programming Languages：</p>
+                                                            <label className="programming_language">React.js</label>
+                                                            <label className="programming_language">Redux</label>
+                                                            <label className="programming_language">SCSS</label>
+                                                            <label className="programming_language">JavaScript</label>
+                                                            <label className="programming_language">Webpack</label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </Link>
                                     </li>
                                 )
                             }}
@@ -121,7 +125,7 @@ class Work extends React.Component {
                                             <p>- 12/2017</p>
                                         </div>
                                         <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
-                                            <img src={meracle} className="project-img" />
+                                            <img src={here} className="project-img" />
                                             <div className="project-desc-container">
                                                 <p className="project-title">HERE 這禮</p>
                                                 <p className="project-desc">線上贈物平台</p>
@@ -153,7 +157,7 @@ class Work extends React.Component {
                                             <p>- 12/2017</p>
                                         </div>
                                         <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
-                                            <img src={meracle} className="project-img" />
+                                            <img src={bonerp} className="project-img" />
                                             <div className="project-desc-container">
                                                 <p className="project-title">BonERP</p>
                                                 <p className="project-desc">Cloud ERP System</p>

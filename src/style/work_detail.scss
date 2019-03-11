@@ -1,3 +1,35 @@
+.sticky {
+    position: fixed !important;
+    top: -10px;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    left: calc(250px + 28px);
+    margin: 0;
+    width: calc(100vw - 250px - 56px);
+    transition: all .02s;
+    animation: sticky_fadein .8s ease-in;
+    .project-title {
+        text-align: center;
+    }
+    .close-btn {
+        top: 5px !important;
+    }
+    & ~ .project-detail_content {
+        transition: all .2s;
+        margin-top: 100px;
+    }
+    
+}
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-animation: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
 #work-detail-container {
     border-radius: 20px;
     -webkit-backdrop-filter: blur(30px);
@@ -16,26 +48,7 @@
     animation: contentScaleUp .5s;
     animation-fill-mode: forwards;  
     
-    .sticky {
-        position: fixed;
-        top: 0;
-        box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16);
-        background-color: #ffffff;
-        width: 100%;
-        left: calc(250px + 28px);
-        margin: 0;
-        width: calc(100vw - 250px - 56px);
-        transition: all .02s;
-        .project-title {
-            text-align: center;
-        }
-        .close-btn {
-            top: 5px;
-        }
-        & ~ .project-detail_content {
-            padding-top: 200px;
-        }
-    }
+    
     .close-btn {
         right: 60px;
         top: 45px;
@@ -100,6 +113,8 @@
                 display: inline-block;
                 width: 20%;
                 margin-right: 30px;
+                margin-bottom: 30px;
+                vertical-align: middle;
             }
         }
     }
@@ -136,6 +151,30 @@
         opacity: 0;
 	}
 	to {
+        opacity: 1;
+	}
+}
+
+
+@-webkit-keyframes sticky_fadein {
+	0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+	100% {
+        opacity: 1;
+	}
+}
+@keyframes sticky_fadein {
+	0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+	100% {
         opacity: 1;
 	}
 }

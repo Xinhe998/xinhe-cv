@@ -118,14 +118,23 @@ body {
         }
     }
     .content-wrapper {
-        display: flex;
+        // display: flex;
+        // height: calc(100vh - 70px - 55px);
+        
+
+        // flex: 0 1 auto;
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        #home-container {
+            display: flex;
         height: calc(100vh - 70px - 55px);
-        padding-left: 80px;   //網頁邊界
+        
 
         flex: 0 1 auto;
         flex-direction: row;
         flex-wrap: wrap;
-        
+            padding-left: 80px;   //網頁邊界
+        }
         .feature-text-container {
             color: #606060;
             // float: left;

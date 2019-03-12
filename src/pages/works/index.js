@@ -124,26 +124,28 @@ class Work extends React.Component {
                                             <p>07/2017</p>
                                             <p>- 12/2017</p>
                                         </div>
-                                        <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
-                                            <img src={here} className="project-img" />
-                                            <div className="project-desc-container">
-                                                <p className="project-title">HERE 這禮</p>
-                                                <p className="project-desc">線上贈物平台</p>
-                                                <div className="project-detail">
-                                                    <div>
-                                                        <p className="project-role-title">Role:</p>
-                                                        <label className="role">Web Front-End Develop</label>
-                                                    </div>
-                                                    <div>
-                                                        <p className="project-program-title">Programming Languages：</p>
-                                                        <label className="programming_language">HTML</label>
-                                                        <label className="programming_language">CSS</label>
-                                                        <label className="programming_language">Bootstrap</label>
-                                                        <label className="programming_language">jQuery</label>
+                                        <Link to={this.props.location.pathname + '/here'}>
+                                            <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
+                                                <img src={here} className="project-img" />
+                                                <div className="project-desc-container">
+                                                    <p className="project-title">HERE 這禮</p>
+                                                    <p className="project-desc">線上贈物平台</p>
+                                                    <div className="project-detail">
+                                                        <div>
+                                                            <p className="project-role-title">Role:</p>
+                                                            <label className="role">Web Front-End Develop</label>
+                                                        </div>
+                                                        <div>
+                                                            <p className="project-program-title">Programming Languages：</p>
+                                                            <label className="programming_language">HTML</label>
+                                                            <label className="programming_language">CSS</label>
+                                                            <label className="programming_language">Bootstrap</label>
+                                                            <label className="programming_language">jQuery</label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </Link>
                                     </li>
                                 )
                             }}

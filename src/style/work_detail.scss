@@ -97,7 +97,17 @@
             color: #606060;
             margin-top: 40px;
         }
-        p {
+        h2 {
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.79;
+            letter-spacing: 1.7px;
+            text-align: left;
+            color: #606060;
+        }
+        p, ul {
             font-size: 12px;
             font-weight: normal;
             font-style: normal;
@@ -111,10 +121,16 @@
         .image-group {
             img {
                 display: inline-block;
-                width: 20%;
+                
                 margin-right: 30px;
                 margin-bottom: 30px;
                 vertical-align: middle;
+                &.app-screenshot {
+                    width: 20%;
+                }
+                &.web-screenshot {
+                    height: 300px;
+                }
             }
         }
     }

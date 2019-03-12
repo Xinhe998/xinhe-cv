@@ -5,12 +5,12 @@ import { Link } from "gatsby"
 import '../../style/work.scss'
 import '../../style/work_detail.scss'
 
-import meracle from '../../Assets/meracle.png'
-import meracle_1 from '../../Assets/meracle-1.png'
-import meracle_2 from '../../Assets/meracle-2.png'
+import here from '../../Assets/here.png'
+// import meracle_1 from '../../Assets/meracle-1.png'
+// import meracle_2 from '../../Assets/meracle-2.png'
 // import meracle_3 from '../../Assets/meracle-1.png'
 
-class Meracle extends React.Component {
+class Here extends React.Component {
     constructor(props) {
         super(props)
         this.handleScroll = this.listenScrollEvent.bind(this);
@@ -45,26 +45,25 @@ class Meracle extends React.Component {
         return (
             <Layout>
                 <div id="work-detail-container" onScroll={this.listenScrollEvent.bind(this)}>
-                    <img src={meracle} className="project-img" />
+                    <img src={here} className="project-img" />
                     <div className="project-desc-container">
                         <div id="be-header-when-scroll">
                             <Link to="/works"><div className="close-btn"></div></Link>
-                            <p className="project-title">Meracle</p>
+                            <p className="project-title">Here</p>
                         </div>
 
                         <p className="project-desc">An app helps to easily settle expenses with a group of people. </p>
                         <div className="project-detail">
                             <div>
                                 <p className="project-role-title">Role:</p>
-                                <label className="role">Front-End Develop</label>
+                                <label className="role">Web Front-End Develop</label>
                             </div>
                             <div>
                                 <p className="project-program-title">Programming Languages：</p>
-                                <label className="programming_language">React.js</label>
-                                <label className="programming_language">Redux</label>
-                                <label className="programming_language">SCSS</label>
-                                <label className="programming_language">JavaScript</label>
-                                <label className="programming_language">Webpack</label>
+                                <label className="programming_language">HTML</label>
+                                <label className="programming_language">CSS</label>
+                                <label className="programming_language">Bootstrap</label>
+                                <label className="programming_language">jQuery</label>
                             </div>
                         </div>
                     </div>
@@ -80,16 +79,11 @@ class Meracle extends React.Component {
                             I was involved in all stages of the process, but I especially contributed the most to web front-end development.</p>
                         <h1>At a Glance</h1>
                         <div className="image-group">
-                            <img src={meracle_1} className="web-screenshot" />
-                            <img src={meracle_2} className="web-screenshot" />
+                            
                         </div>
                         <h1>Motivation & Solution</h1>
                         <p>
-                            {/* There is full of many memory training methods */}
-                            現今市面上充斥著許多記憶力訓練方法，
-                            但卻沒有一套系統，完善的分析、追縱與量化記憶力，因此我們開發出一套針對學童的腦波記憶力評估訓練系統。
-                            基於香港記憶學院提供的記憶力測驗作為指標，結合N-back記憶理論，設計出一套完整實驗流程，
-                            驗證本系統在提升孩童記憶力上確實有成效。
+                            
                         </p>
                         <h1>Outcome</h1>
                         <p><b>Awards</b></p>
@@ -115,4 +109,4 @@ class Meracle extends React.Component {
     }
 }
 
-export default (Meracle);
+export default (Here);

@@ -56,7 +56,7 @@ const About = ({ t }) => (
                         <div className="timeline-content">
                             Intern <b>@ Advantech</b>
                             <ul>
-                                <li>Responsible for developing and maintaining Marketplace project with ASP.NETMVC5. </li>
+                                <li>Responsible for developing and maintaining <a href="https://wise-paas.advantech.com/en-us/marketplace" target="_blank">Marketplace</a> project with ASP.NETMVC5. </li>
                                 <li>Successfully imported Coded UI Test with Selenium and completed CI process on myown in a week. </li>
                                 <li>Shared UI Test experience on technical conferences with IT colleagues and QAcolleagues who is work in Kunshan, China. </li>
                             </ul>
@@ -77,8 +77,8 @@ const About = ({ t }) => (
                         <div className="timeline-content">
                             Intern <b>@ Trunk Studio</b>
                             <ul>
-                                <li>Participation of ‘VIPT JOB’ official website(job bank platform for migrant workers and enterprise) development with Vue.js and EJS, also helped to implement i18n. </li>
-                                <li>Participation of ‘Kbro HealthCare’ mobile app development with React Native. </li>
+                                <li>Participation of ‘<a href="https://viptjob.com" target="_blank">VIPT JOB</a>’ official website(job bank platform for migrant workers and enterprise) development with Vue.js and EJS, also helped to implement i18n. </li>
+                                <li>Participation of ‘<a href="https://itunes.apple.com/tw/app/healthcare%E5%81%A5%E5%BA%B7%E4%BF%9D%E5%81%A5%E5%AE%A4/id1239683214?mt=8" target="_blank">Kbro HealthCare</a>’ mobile app development with React Native. </li>
                                 <li>Familiar with Git, JavaScript, React, EJS. </li>
                                 <li>Familiar working in Scrum.</li>
                             </ul>

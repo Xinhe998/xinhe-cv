@@ -155,32 +155,34 @@ class Work extends React.Component {
                                 return (
                                     <li className="timeline-milestone">
                                         <div className={isVisible ? 'timeline-date in_viewport' : 'timeline-date'}>
-                                            <p>07/2017</p>
-                                            <p>- 12/2017</p>
+                                            <p>01/2017</p>
+                                            <p>- 03/2017</p>
                                         </div>
-                                        <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
-                                            <img src={bonerp} className="project-img" />
-                                            <div className="project-desc-container">
-                                                <p className="project-title">BonERP</p>
-                                                <p className="project-desc">Cloud ERP System</p>
-                                                <div className="project-detail">
-                                                    <div>
-                                                        <p className="project-role-title">Role:</p>
-                                                        <label className="role">Web Front-End Develop</label>
-                                                        <label className="role">Web Back-End Develop</label>
-                                                    </div>
-                                                    <div>
-                                                        <p className="project-program-title">Programming Languages：</p>
-                                                        <label className="programming_language">.NET MVC 5</label>
-                                                        <label className="programming_language">MS SQL Server</label>
-                                                        <label className="programming_language">HTML</label>
-                                                        <label className="programming_language">CSS</label>
-                                                        <label className="programming_language">Bootstrap</label>
-                                                        <label className="programming_language">jQuery</label>
+                                        <Link to={this.props.location.pathname + '/bonerp'}>
+                                            <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
+                                                <img src={bonerp} className="project-img" />
+                                                <div className="project-desc-container">
+                                                    <p className="project-title">BonERP</p>
+                                                    <p className="project-desc">Cloud ERP System</p>
+                                                    <div className="project-detail">
+                                                        <div>
+                                                            <p className="project-role-title">Role:</p>
+                                                            <label className="role">Web Front-End Develop</label>
+                                                            <label className="role">Web Back-End Develop</label>
+                                                        </div>
+                                                        <div>
+                                                            <p className="project-program-title">Programming Languages：</p>
+                                                            <label className="programming_language">.NET MVC 5</label>
+                                                            <label className="programming_language">MS SQL Server</label>
+                                                            <label className="programming_language">HTML</label>
+                                                            <label className="programming_language">CSS</label>
+                                                            <label className="programming_language">Bootstrap</label>
+                                                            <label className="programming_language">jQuery</label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </Link>
                                     </li>
                                 )
                             }}

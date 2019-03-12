@@ -52,7 +52,7 @@ class Meracle extends React.Component {
                             <p className="project-title">Meracle</p>
                         </div>
 
-                        <p className="project-desc">An app helps to easily settle expenses with a group of people. </p>
+                        <p className="project-desc">A platform that trains and tracks memory for young-learners. </p>
                         <div className="project-detail">
                             <div>
                                 <p className="project-role-title">Role:</p>

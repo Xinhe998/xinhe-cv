@@ -3,7 +3,8 @@ import Layout from "../../components/Layout"
 // import '../../I18n';
 import { Link } from "gatsby"
 
-// import { useTranslation } from 'react-i18next';
+import { withI18next } from 'gatsby-plugin-i18next';
+import { withNamespaces } from 'react-i18next';
 
 import '../../style/work.scss'
 import meracle from '../../Assets/meracle.png'
@@ -37,7 +38,7 @@ class Work extends React.Component {
         this.setState({ active4: isActive });
     };
     render() {
-        // const { t, i18n } = useTranslation();
+        const { t } = this.props;
         return (
             <Layout>
                 <div id="work-page">
@@ -53,7 +54,7 @@ class Work extends React.Component {
 
                                         <div className={isVisible ? 'timeline-date in_viewport' : 'timeline-date'}>
                                             <p>11/2018</p>
-                                            <p>- present</p>
+                                            <p>- {t('present')}</p>
                                         </div>
                                         <Link to={this.props.location.pathname + '/ghowa'}>
                                             <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
@@ -63,8 +64,8 @@ class Work extends React.Component {
                                                     <p className="project-desc">An app helps to easily settle expenses with a group of people</p>
                                                     <div className="project-detail">
                                                         <div>
-                                                            <p className="project-role-title">Role:</p>
-                                                            <label className="role">Back-End Develop</label>
+                                                            <p className="project-role-title">{t('role')}:</p>
+                                                            <label className="role">{t('back_end_dev')}</label>
                                                         </div>
                                                         <div>
                                                             <p className="project-program-title">Programming Languages：</p>
@@ -97,8 +98,8 @@ class Work extends React.Component {
                                                     <p className="project-desc">學童腦波記憶力評估訓練系統 A platform that trains and tracks memory for young-learners</p>
                                                     <div className="project-detail">
                                                         <div>
-                                                            <p className="project-role-title">Role:</p>
-                                                            <label className="role">Web Front-End Develop</label>
+                                                            <p className="project-role-title">{t('role')}:</p>
+                                                            <label className="role">{t('web_front_end_dev')}</label>
                                                         </div>
                                                         <div>
                                                             <p className="project-program-title">Programming Languages：</p>
@@ -132,8 +133,8 @@ class Work extends React.Component {
                                                     <p className="project-desc">線上贈物平台</p>
                                                     <div className="project-detail">
                                                         <div>
-                                                            <p className="project-role-title">Role:</p>
-                                                            <label className="role">Web Front-End Develop</label>
+                                                            <p className="project-role-title">{t('role')}:</p>
+                                                            <label className="role">{t('web_front_end_dev')}</label>
                                                         </div>
                                                         <div>
                                                             <p className="project-program-title">Programming Languages：</p>
@@ -166,9 +167,9 @@ class Work extends React.Component {
                                                     <p className="project-desc">Cloud ERP System</p>
                                                     <div className="project-detail">
                                                         <div>
-                                                            <p className="project-role-title">Role:</p>
-                                                            <label className="role">Web Front-End Develop</label>
-                                                            <label className="role">Web Back-End Develop</label>
+                                                            <p className="project-role-title">{t('role')}:</p>
+                                                            <label className="role">{t('web_front_end_dev')}</label>
+                                                            <label className="role">{t('web_back_end_dev')}</label>
                                                         </div>
                                                         <div>
                                                             <p className="project-program-title">Programming Languages：</p>
@@ -199,4 +200,4 @@ class Work extends React.Component {
     }
 }
 
-export default Work;
+export default withI18next()(withNamespaces('translation')(Work));

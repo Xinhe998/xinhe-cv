@@ -97,6 +97,28 @@ const About = ({ t }) => (
                         </div>
                     </li>
                 </ul>
+                <h1>Awards</h1>
+                <ul className="awards-list">
+                    <li><b>Student Elite Award,</b> National Taichung University of Science and Technology, 2018</li>
+                    <li>
+                        <b>First Prize,</b> Undergraduate Project of College of Information and Distribution Science, 2017
+                    </li>
+                    <li>
+                        <b>Third Prize,</b> International ICT Innovative Services Awards: Titansoft Pte Ltd Agile development category, 2017
+                    </li>
+                    <li>
+                        <b>Honorable Mention,</b> International ICT Innovative Services Awards: Campus 4G mobile application category, 2017
+                    </li>
+                    <li>
+                        <b>Honorable Mention,</b> Web&App Creative competition in National Taipei University of Education, 2017
+                    </li>
+                    <li>
+                        <b>Honorable Mention,</b> Feng Chia Shopping Area Entrepreneurial Competition, 2017
+                    </li>
+                    <li>
+                        <b>First Prize,</b> International ICT Innovative Services Awards: Economic Goegraphy Database category, 2016
+                    </li>
+                </ul>
                 <h1 className="sp-block">
                     <strong>．．．</strong>
                 </h1>

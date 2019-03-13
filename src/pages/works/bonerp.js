@@ -98,7 +98,7 @@ class BonErp extends React.Component {
                         <p>If you're interested in learning more, send me an email and I would love to chat!</p>
                         <a href="mailto:xinhe998@gmail.com">xinhe998@gmail.com</a>
                     </div>
-                    <div className="navigate-project-btn-container">
+                    <div className="navigate-project-btn-container only-display-prev">
                         <Link to='works/here'> ← PREV PROJECT</Link>
                         <Link>NEXT PROJECT → </Link>
                     </div>

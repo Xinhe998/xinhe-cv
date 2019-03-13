@@ -7,8 +7,9 @@ import '../../style/work_detail.scss'
 
 import here from '../../Assets/here.png'
 import here_1 from '../../Assets/here-1.png'
-// import meracle_2 from '../../Assets/meracle-2.png'
-// import meracle_3 from '../../Assets/meracle-1.png'
+import here_2 from '../../Assets/here-2.png'
+import here_3 from '../../Assets/here-3.png'
+import here_4 from '../../Assets/here-4.png'
 
 class Here extends React.Component {
     constructor(props) {
@@ -81,6 +82,9 @@ class Here extends React.Component {
                         <h1>At a Glance</h1>
                         <div className="image-group">
                             <img src={here_1} className="web-screenshot" />
+                            <img src={here_2} className="web-screenshot" />
+                            <img src={here_3} className="web-screenshot" />
+                            <img src={here_4} className="web-screenshot" />
                         </div>
                         <h1>Outcome</h1>
                         <p><b>Awards</b></p>

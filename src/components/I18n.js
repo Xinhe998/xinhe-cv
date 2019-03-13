@@ -19,13 +19,15 @@ i18n
       en: {
         translation: {
           skill: "Skill",
-          experience: "Experience"
+          experience: "Experience",
+          present: "present"
         },
       },
       tw: {
         translation: {
           skill: "技能",
-          experience: "經歷"
+          experience: "經歷",
+          present: "進行中"
         },
       },
     },

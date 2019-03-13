@@ -8,7 +8,9 @@ import '../../style/work_detail.scss'
 import meracle from '../../Assets/meracle.png'
 import meracle_1 from '../../Assets/meracle-1.png'
 import meracle_2 from '../../Assets/meracle-2.png'
-// import meracle_3 from '../../Assets/meracle-1.png'
+import meracle_app_1 from '../../Assets/meracle-app-1.png'
+import meracle_app_2 from '../../Assets/meracle-app-2.png'
+import meracle_app_3 from '../../Assets/meracle-app-3.png'
 
 class Meracle extends React.Component {
     constructor(props) {
@@ -79,9 +81,16 @@ class Meracle extends React.Component {
                             Our team, four people, completed this project with an app by cross-platform mobile framework React Native, a web system by React.js, and RESTful API by ASP.NET API.
                             I was involved in all stages of the process, but I especially contributed the most to web front-end development.</p>
                         <h1>At a Glance</h1>
+                        <p>Web</p>
                         <div className="image-group">
                             <img src={meracle_1} className="web-screenshot" />
                             <img src={meracle_2} className="web-screenshot" />
+                        </div>
+                        <p>App</p>
+                        <div className="image-group">
+                            <img src={meracle_app_1} className="app-screenshot" />
+                            <img src={meracle_app_2} className="app-screenshot" />
+                            <img src={meracle_app_3} className="app-screenshot" />
                         </div>
                         <h1>Motivation & Solution</h1>
                         <p>

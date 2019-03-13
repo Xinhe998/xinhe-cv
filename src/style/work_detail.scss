@@ -150,6 +150,16 @@
         display: flex;
         justify-content: space-between;
         margin-top: 40px;
+        &.only-display-next {
+            a:first-of-type {
+                visibility: hidden;
+            }
+        }
+        &.only-display-prev {
+            a:last-of-type {
+                visibility: hidden;
+            }
+        }
         a {
             font-size: 12px;
             font-weight: bold;

@@ -75,7 +75,7 @@ class Ghowa extends React.Component {
                         <p>Ghowa is an <b>app that calculates a balance of a group of people who spend money and want to calculate a balance for each participant. </b>
                             It allows user to create infinite groups for managing a list with the shared expenses.<br />
                             In this project, I collaborated with people from NTUE (National Taipei University of Education Department) of Digital Technology Design to ideate the solution
-                                 and was individually responsible for building the REST API with Node.js and Express.js .<br />
+                                 and was individually responsible for building the RESTful API with Node.js and Express.js .<br />
                             This project is still ongoing and planned to be launched in summer 2019, at that time, Ghowa will be finded on App Store. </p>
                         <h1>At a Glance</h1>
                         <p>From wireframe to mock-up.</p>
@@ -85,8 +85,19 @@ class Ghowa extends React.Component {
                             <img src={ghowa_app_2} className="app-screenshot" />
                         </div>
                     </div>
+                    <h1 className="sp-block">
+                        <strong>．．．</strong>
+                    </h1>
+                    <div className="email-me">
+                        <p>If you're interested in learning more, send me an email and I would love to chat!</p>
+                        <a href="mailto:xinhe998@gmail.com">xinhe998@gmail.com</a>
+                    </div>
+                    <div className="navigate-project-btn-container">
+                        <Link> ← PREV PROJECT</Link>
+                        <Link to='works/meracle'>NEXT PROJECT → </Link>
+                    </div>
                 </div>
-
+                <p className="copyright">© Xinhe Hsu 2019.</p>
             </Layout>
         )
     }

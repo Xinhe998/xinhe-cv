@@ -94,7 +94,7 @@ class Work extends React.Component {
                                                 <img src={meracle} className="project-img" />
                                                 <div className="project-desc-container">
                                                     <p className="project-title">Meracle</p>
-                                                    <p className="project-desc">學童腦波記憶力評估訓練系統</p>
+                                                    <p className="project-desc">學童腦波記憶力評估訓練系統 A platform that trains and tracks memory for young-learners</p>
                                                     <div className="project-detail">
                                                         <div>
                                                             <p className="project-role-title">Role:</p>
@@ -188,7 +188,12 @@ class Work extends React.Component {
                             }}
                         </VisibilitySensor>
                     </ul>
+                    
+                    <div className="email-me">
+                        <a href="mailto:xinhe998@gmail.com">xinhe998@gmail.com</a>
+                    </div>
                 </div>
+                <p className="copyright">© Xinhe Hsu 2019.</p>
             </Layout>
         )
     }

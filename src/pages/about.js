@@ -29,9 +29,9 @@ const About = ({ t }) => (
                 <p>Web Front-End</p>
                 <div>
                     <label className="pink">React.js</label>
-                    <label className="pink">Vue.js</label>
                     <label className="pink">Redux</label>
                     <label className="pink">jQuery</label>
+                    <label className="pink">Vue.js</label>
                     <label className="pink">HTML</label>
                     <label className="pink">CSS / SCSS</label>
                 </div>
@@ -57,7 +57,7 @@ const About = ({ t }) => (
                             Intern <b>@ Advantech</b>
                             <ul>
                                 <li>Responsible for developing and maintaining <a href="https://wise-paas.advantech.com/en-us/marketplace" target="_blank">Marketplace</a> project with ASP.NETMVC5. </li>
-                                <li>Successfully imported Coded UI Test with Selenium and completed CI process on myown in a week. </li>
+                                <li>Successfully imported Coded UI Test with Selenium and completed CI process on my own in a week. </li>
                                 <li>Shared UI Test experience on technical conferences with IT colleagues and QAcolleagues who is work in Kunshan, China. </li>
                             </ul>
                             <div className="image-hover img-zoom-in">
@@ -97,6 +97,13 @@ const About = ({ t }) => (
                         </div>
                     </li>
                 </ul>
+                <h1 className="sp-block">
+                    <strong>．．．</strong>
+                </h1>
+                <div className="email-me">
+                    <p>If you're interested in learning more about me, send me an email and I would love to chat!</p>
+                    <a href="mailto:xinhe998@gmail.com">xinhe998@gmail.com</a>
+                </div>
             </div>
         </div>
     </Layout>

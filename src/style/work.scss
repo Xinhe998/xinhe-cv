@@ -9,6 +9,7 @@ body:has(#work-page) {
         border-left: 2.5px solid #dedede;
         margin-top: 50px;
         padding-left: 15px;
+        margin-bottom: 50px;
         .in_viewport {
             -webkit-animation: fadein 1s, scaleUp .8s; /* Safari, Chrome and Opera > 12.1 */
             -moz-animation: fadein 1s, scaleUp .8s; /* Firefox < 16 */

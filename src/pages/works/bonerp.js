@@ -6,7 +6,7 @@ import '../../style/work.scss'
 import '../../style/work_detail.scss'
 
 import bonerp from '../../Assets/bonerp.png'
-// import here_1 from '../../Assets/here-1.png'
+import sitemap from '../../Assets/BonERP_sitemap.jpg'
 // import meracle_2 from '../../Assets/meracle-2.png'
 // import meracle_3 from '../../Assets/meracle-1.png'
 
@@ -72,24 +72,38 @@ class BonErp extends React.Component {
                     </div>
                     <div className="project-detail_content">
                         <h1>Project Overview</h1>
-                        <p>Summer Internshipct</p>
+                        <p>Winter Internship</p>
                         <p>3 months (01/2017 - 03/2017)</p>
                         <h1>Project Brief</h1>
                         <p>
-                            BonERP is <b>a website platform based around the concept of bartering. </b>
-                            Its inspiration comes from the story that started with the trading of a paper clip and ended with a house.
-                        HERE aims to <b>H</b>elp <b>E</b>veryone, <b>R</b>euse <b>E</b>verything. It allows donors that have different demands include releasing ending inventory in an enterprise, contributing unwanted item in home etc.<br />
-                            This is the first time I ideated, planned, developed a complete web system and writed system analysis documents with team by ourselves. I was involved in all stages of the process, but I especially contributed the most to web front-end development.
+                        In winter 2017, I interned at <a href="https://taiwancloud.com/" target="_blank">Taiwan Cloud Corporation</a> with four of my classmates.
+                        we helped to develop and import an online ERP system, BonERP.
+                        Common features in ERP such as Purchase, Sales and Inventory were included in BonERP. 
+                        During this project, I was individually responsible for front-end development, and also support to develop several back-end modules.
                         </p>
+                        <h1>Site Map</h1>
+                        <div className="image-group">
+                            <img src={sitemap} className="other" />
+                        </div>
                         <h1>At a Glance</h1>
                         <div className="image-group">
                             {/* <img src={here_1} className="web-screenshot" /> */}
                         </div>
-                        <h1>Outcome</h1>
-                        
+
+                    </div>
+                    <h1 className="sp-block">
+                        <strong>．．．</strong>
+                    </h1>
+                    <div className="email-me">
+                        <p>If you're interested in learning more, send me an email and I would love to chat!</p>
+                        <a href="mailto:xinhe998@gmail.com">xinhe998@gmail.com</a>
+                    </div>
+                    <div className="navigate-project-btn-container">
+                        <Link to='works/here'> ← PREV PROJECT</Link>
+                        <Link>NEXT PROJECT → </Link>
                     </div>
                 </div>
-
+                <p className="copyright">© Xinhe Hsu 2019.</p>
             </Layout>
         )
     }

@@ -90,8 +90,19 @@ class Here extends React.Component {
                             </li>
                         </ul>
                     </div>
+                    <h1 className="sp-block">
+                        <strong>．．．</strong>
+                    </h1>
+                    <div className="email-me">
+                        <p>If you're interested in learning more, send me an email and I would love to chat!</p>
+                        <a href="mailto:xinhe998@gmail.com">xinhe998@gmail.com</a>
+                    </div>
+                    <div className="navigate-project-btn-container">
+                        <Link to="works/meracle"> ← PREV PROJECT</Link>
+                        <Link to='works/bonerp'>NEXT PROJECT → </Link>
+                    </div>
                 </div>
-
+                <p className="copyright">© Xinhe Hsu 2019.</p>
             </Layout>
         )
     }

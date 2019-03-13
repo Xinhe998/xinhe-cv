@@ -70,7 +70,7 @@ class Meracle extends React.Component {
                     </div>
                     <div className="project-detail_content">
                         <h1>Project Overview</h1>
-                        <p>The Undergraduate Team Project</p>
+                        <p>The Junior College Team Project</p>
                         <p>4 months (08/2017 - 12/2017)</p>
                         <h1>Project Brief</h1>
                         <p>Meracle is <b>a platform that trains and tracks memory for young-learners. </b>
@@ -108,8 +108,19 @@ class Meracle extends React.Component {
                             </li>
                         </ul>
                     </div>
+                    <h1 className="sp-block">
+                        <strong>．．．</strong>
+                    </h1>
+                    <div className="email-me">
+                        <p>If you're interested in learning more, send me an email and I would love to chat!</p>
+                        <a href="mailto:xinhe998@gmail.com">xinhe998@gmail.com</a>
+                    </div>
+                    <div className="navigate-project-btn-container">
+                        <Link to="works/ghowa"> ← PREV PROJECT</Link>
+                        <Link to='works/here'>NEXT PROJECT → </Link>
+                    </div>
                 </div>
-
+                <p className="copyright">© Xinhe Hsu 2019.</p>
             </Layout>
         )
     }

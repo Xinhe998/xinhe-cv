@@ -14,6 +14,7 @@ const Layout = ({ children, data, t }) => (
             <Sidebar />
             <div className="layout-content">
                 {children}
+                
             </div>
         </div>
     </I18nextProvider>

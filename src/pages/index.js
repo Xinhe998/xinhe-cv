@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 
 import HomeLayout from '../components/HomeLayout'
 import Code from '../components/Code'
@@ -23,7 +23,7 @@ class Home extends React.Component {
                         <hr />
                         <p className="feature-text-line3">A Web Developer,</p>
                         <p className="feature-text-line4">always keeping up with new trends in tech.</p>
-                        <button>Learn More About Me !</button>
+                        <button onClick={() => navigate('/works')}>Learn More About Me !</button>
                     </div>
                 </div>
                 <div className="feature-img-container">

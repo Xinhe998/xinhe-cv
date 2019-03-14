@@ -83,10 +83,11 @@
     }
       
     #seg1:checked ~ #bckgrnd {
+        height: $segment-label-height - 5px;
         transition: all 0.1s ease-in-out;
-        -webkit-transform: translateX(0) perspective(300px) rotateX(-30deg);
-        -o-transform: translateX(0) perspective(300px) rotateX(-30deg);
-        -moz-transform:  translateX(0) perspective(300px) rotateX(-30deg);
+        -webkit-transform: translatey(2px) translateX(0) perspective(300px) rotateX(-30deg);
+        -o-transform: translatey(2px) translateX(0) perspective(300px) rotateX(-30deg);
+        -moz-transform:  translatey(2px) translateX(0) perspective(300px) rotateX(-30deg);
         -webkit-transform-origin: 0% 50%;
         -moz-transform-origin: 0% 50%;
         -o-transform-origin: 0% 50%;
@@ -94,6 +95,7 @@
         border-radius: 10px 0 0 10px;
     }
     #seg2:checked ~ #bckgrnd {
+        width: $segment-label-width + 1px;
         transition: all 0.1s ease-in-out;
         -webkit-transform: translatey(-1.5px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
         -o-transform: translatey(-1.5px) translateX($segment-label-width) perspective(300px) rotateX(30deg);

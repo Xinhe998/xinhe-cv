@@ -10,9 +10,9 @@ import { graphql } from 'gatsby';
 import { withI18next } from 'gatsby-plugin-i18next';
 import { withNamespaces } from 'react-i18next';
 import { translate, Trans } from "react-i18next"
-import i18n from '../components/I18n'
+import i18next from "i18next";
 
-const About = ({ t }) => (
+const About = ({ t, i18 }) => (
     <Layout>
         <div id="about-page">
             <div className="intro">
@@ -28,12 +28,15 @@ const About = ({ t }) => (
                 <h1>{t('skill')}</h1>
                 <p>{t('web_front_end')}</p>
                 <div>
+                    <label className="pink">JavaScript</label>
                     <label className="pink">React.js</label>
                     <label className="pink">Redux</label>
                     <label className="pink">jQuery</label>
                     <label className="pink">Vue.js</label>
+                    <label className="pink">Webpack</label>
                     <label className="pink">HTML</label>
                     <label className="pink">CSS / SCSS</label>
+                    <label className="pink">Bootstrap</label>
                 </div>
                 <p>{t('web_back_end')}</p>
                 <div>
@@ -46,6 +49,10 @@ const About = ({ t }) => (
                 <div>
                     <label className="pink">MS SQL Server</label>
                     <label className="pink">MySQL</label>
+                </div>
+                <p>{t('server')}</p>
+                <div>
+                    <label className="blue">IIS</label>
                 </div>
                 <h1>{t('experience')}</h1>
                 <ul className="timeline-container">
@@ -63,6 +70,7 @@ const About = ({ t }) => (
                                 </li>
                                 <li>{t('advantech_dutie2')} </li>
                                 <li>{t('advantech_dutie3')} </li>
+                                <li>{t('advantech_dutie4')} </li>
                             </ul>
                             <div className="image-hover img-zoom-in">
                                 <a href="https://medium.com/@xinhe998/advantech-internship-f4ba6a13acf6" target="_blank">
@@ -70,7 +78,7 @@ const About = ({ t }) => (
                                 </a>
                             </div>
                             <div className="bubble_wrapper">
-                                <div className="bubble">{t('medium_article')} :<br />{t('what_i_learn_in_adv')}</div>
+                                <div className={i18next.language == 'tw' ? 'bubble for_tw' : 'bubble for_en'}>{t('medium_article')} :<br />{t('what_i_learn_in_adv')}</div>
                             </div>
                         </div>
                     </li>
@@ -87,10 +95,10 @@ const About = ({ t }) => (
                                     </Trans> </li>
                                 <li>
                                     <Trans i18nKey="trunk_dutie2">
-                                        Participation of ‘<a href="https://itunes.apple.com/tw/app/healthcare%E5%81%A5%E5%BA%B7%E4%BF%9D%E5%81%A5%E5%AE%A4/id1239683214?mt=8" target="_blank">Kbro HealthCare</a>’ mobile app development with React Native. 
+                                        Participation of ‘<a href="https://itunes.apple.com/tw/app/healthcare%E5%81%A5%E5%BA%B7%E4%BF%9D%E5%81%A5%E5%AE%A4/id1239683214?mt=8" target="_blank">Kbro HealthCare</a>’ mobile app development with React Native.
                                     </Trans>
-                                    </li>
-                                    
+                                </li>
+
                                 <li>{t('trunk_dutie3')} </li>
                                 <li>{t('trunk_dutie4')}</li>
                             </ul>

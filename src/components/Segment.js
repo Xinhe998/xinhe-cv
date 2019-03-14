@@ -21,11 +21,11 @@ class Segment extends React.Component {
             <div id="segment" className={this.props.isInSidebar? 'is_in_sidebar' : '' }>
                 <input id="seg1" type="radio" name="radioBtn" checked={this.state.lang === 'en'} onChange={()=> this.handleChange('en')}  />
 
-                <label className="labels" htmlFor="seg1">EN</label>
+                <label className="labels" htmlFor="seg1"><span>EN</span></label>
                 
                 <input id="seg2" type="radio" name="radioBtn" checked={this.state.lang === 'tw'} onChange={()=> this.handleChange('tw')} />
 
-                <label className="labels" htmlFor="seg2">繁中</label>
+                <label className="labels" htmlFor="seg2"><span>繁中</span></label>
                 
                 <div id="bckgrnd"></div>
             </div> 

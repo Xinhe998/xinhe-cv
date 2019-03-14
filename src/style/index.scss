@@ -223,9 +223,9 @@ body {
                 box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
                 background-color: #ffffff;
                 border: none;
-                padding: 12px 20px;
+                padding: 15px 20px;
                 line-height: 1.23;
-                margin-top: 30px;
+                margin-top: 20px;
                 font-weight: 300;
                 font-style: normal;
                 font-stretch: normal;
@@ -242,6 +242,10 @@ body {
                 animation: fadeIn 2s;
                 animation-delay: .7s;
                 animation-fill-mode: forwards;  
+                transition: all .5s;
+                &:hover {
+                    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.08);
+                }
             }
         }
         .feature-img-container {

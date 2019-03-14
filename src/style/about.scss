@@ -285,6 +285,7 @@
     line-height: 1.8;
     font-size: 12px;
     cursor: default;
+    
     &:before, &:after {
         content: "";
         display: block;
@@ -295,11 +296,24 @@
         top: 50%;
         transform: translate(54%, -50%) rotate(45deg);
         background: #6D7589;
-        @media screen and (max-width: 1392px) {
-            left: 50px;
-            top: 0%;
-        }
       }
+      &.for_en {
+        &:before, &:after {
+           
+            @media screen and (max-width: 1392px) {
+                left: 50px;
+                top: 0%;
+            }
+        }
+    }
+      &.for_tw {
+        &:before, &:after {
+            @media screen and (max-width: 1247px) {
+                left: 50px;
+                top: 0%;
+            }
+        }
+    }
 }
 @-webkit-keyframes SlideToTop {
 	from {

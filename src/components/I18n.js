@@ -49,8 +49,9 @@ i18n
           trunk_studio: "Trunk Studio",
           taiwan_cloud: "Taiwan Cloud",
           advantech_dutie1: "Responsible for developing and maintaining <1>{{marketplace}}Marketplace</1> project with ASP.NET MVC 5.",
-          advantech_dutie2: "Successfully implemented Coded UI Test with Selenium and completed CI process on my own in a week.",
-          advantech_dutie3: "Shared UI Test experience on technical conferences with IT colleagues and QAcolleagues who is work in Kunshan, China.",
+          advantech_dutie2: "Successfully implemented Coded UI Test with 50 test cases using Selenium and completed CI process on my own in a week. The result was increasing 10% of human resource in our department.",
+          advantech_dutie3: "Hosted a transnational conference to shared the experience on coded UI test with IT colleagues and QA colleagues working in Kunshan, China.",
+          advantech_dutie4: "Partnered with a manager, PM, UI/UX designers and software engineers to develop Marketplace project and other website projects.",
           program_lang: "Programming Languages",
           meracle_desc: "A platform that trains and tracks memory for young-learners",
           meracle: "Meracle",
@@ -89,14 +90,15 @@ i18n
           ghowa_brief2: "In this project, I collaborated with people from NTUE (National Taipei University of Education Department) of Digital Technology Design to ideate the solution and was individually responsible for building the RESTful API with Node.js and Express.js .",
           ghowa_brief3: "This project is still ongoing and <1>planned to be launched on App Store</1> in summer 2019.",
           prev_project: "PREV PROJECT",
-          next_project: "NEXT PROJECT"
+          next_project: "NEXT PROJECT",
+          server: "Server"
         },
       },
       tw: {
         translation: {
           skill: "技能",
           experience: "經歷",
-          present: "進行中",
+          present: "迄今",
           role: "角色",
           web_front_end_dev: "網頁前端開發",
           web_front_end: "網頁前端",
@@ -124,9 +126,10 @@ i18n
           advantech: "Advantech 研華股份有限公司",
           trunk_studio: "Trunk Studio 創科資訊股份有限公司",
           taiwan_cloud: "Taiwan Cloud 臺灣寬雲股份有限公司",
-          advantech_dutie1: "主要負責以ASP.NET MVC 5開發與維護研華<1>{{marketplace}}軟體市集</1>網站系統。",
-          advantech_dutie2: "僅花費一星期，獨自研究並首度成功為研華導入網頁自動化測試與完成持續整合(CI)流程。",
-          advantech_dutie3: "於公司內部舉辦技術分享會，教導中國大陸昆山QA同仁及總部IT同仁自動化測試代碼撰寫及相關經驗。",
+          advantech_dutie1: "主要負責以ASP.NET MVC 5開發與維護研華<1>{{marketplace}}雲端軟體市集專案</1>網站系統。",
+          advantech_dutie2: "僅花費一星期，獨自研究並首度成功為研華導入網頁自動化測試與撰寫了50項測試案例，並完成持續整合(CI)流程，增加部門10%人力資源。",
+          advantech_dutie3: "舉辦跨國技術分享會議，教導中國大陸昆山QA同仁及總部IT同仁自動化測試代碼撰寫及相關經驗。",
+          advantech_dutie4: "與協理、PM、UI/UX設計師及多位工程師合作開發雲端軟體市集和其他網站專案。",
           program_lang: "程式語言",
           meracle_desc: "學童腦波記憶力評估訓練系統",
           meracle: "Meracle 憶想奇機",
@@ -165,7 +168,8 @@ i18n
           ghowa_brief2: "在這份專案中，我與來自國立臺北教育大學 數位科技設計學系的同學跨校合作，進行解決方案的發想與獨自負責運用 Node.js & Express.js 開發後端 RESTful API。",
           ghowa_brief3: "此份專案目前仍在開發進行中，且預計將於2019年夏季<1>上架至App Store</1>。",
           prev_project: "上一篇",
-          next_project: "下一篇"
+          next_project: "下一篇",
+          server: "伺服器"
         },
       },
     },

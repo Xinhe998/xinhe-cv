@@ -61,6 +61,10 @@
         cursor: pointer;
         outline: 0;
         vertical-align: middle;
+        transition: all .5s;
+        &:hover {
+            box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.08);
+        }
         img {
             width: 13px;
             margin-left: 10px;

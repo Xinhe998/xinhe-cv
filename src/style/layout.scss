@@ -86,6 +86,9 @@
 		}
 	}
 }
+#lightboxBackdrop {
+    animation: fadein .08s ease-in;
+}
 @-webkit-keyframes flip {
 	100% {
 		-webkit-transform: rotateX(0);

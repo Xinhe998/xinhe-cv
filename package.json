@@ -26,6 +26,7 @@
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-i18next": "9.0.0",
+    "react-images": "^0.5.19",
     "react-transition-group": "^2.4.0",
     "react-visibility-sensor": "^5.0.2"
   },

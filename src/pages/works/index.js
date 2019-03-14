@@ -61,14 +61,14 @@ class Work extends React.Component {
                                                 <img src={ghowa} className="project-img" />
                                                 <div className="project-desc-container">
                                                     <p className="project-title">Ghowa</p>
-                                                    <p className="project-desc">An app helps to easily settle expenses with a group of people</p>
+                                                    <p className="project-desc">{t('ghowa_desc')}</p>
                                                     <div className="project-detail">
                                                         <div>
-                                                            <p className="project-role-title">{t('role')}:</p>
+                                                            <p className="project-role-title">{t('role')}：</p>
                                                             <label className="role">{t('back_end_dev')}</label>
                                                         </div>
                                                         <div>
-                                                            <p className="project-program-title">Programming Languages：</p>
+                                                            <p className="project-program-title">{t('program_lang')}：</p>
                                                             <label className="programming_language">Node.js</label>
                                                             <label className="programming_language">Express.js</label>
                                                             <label className="programming_language">MySQL</label>
@@ -94,15 +94,15 @@ class Work extends React.Component {
                                             <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
                                                 <img src={meracle} className="project-img" />
                                                 <div className="project-desc-container">
-                                                    <p className="project-title">Meracle</p>
-                                                    <p className="project-desc">學童腦波記憶力評估訓練系統 A platform that trains and tracks memory for young-learners</p>
+                                                    <p className="project-title">{t('meracle')}</p>
+                                                    <p className="project-desc">{t('meracle_desc')}</p>
                                                     <div className="project-detail">
                                                         <div>
-                                                            <p className="project-role-title">{t('role')}:</p>
+                                                            <p className="project-role-title">{t('role')}：</p>
                                                             <label className="role">{t('web_front_end_dev')}</label>
                                                         </div>
                                                         <div>
-                                                            <p className="project-program-title">Programming Languages：</p>
+                                                            <p className="project-program-title">{t('program_lang')}：</p>
                                                             <label className="programming_language">React.js</label>
                                                             <label className="programming_language">Redux</label>
                                                             <label className="programming_language">SCSS</label>
@@ -129,15 +129,15 @@ class Work extends React.Component {
                                             <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
                                                 <img src={here} className="project-img" />
                                                 <div className="project-desc-container">
-                                                    <p className="project-title">HERE 這禮</p>
-                                                    <p className="project-desc">線上贈物平台</p>
+                                                    <p className="project-title">{t('here')}</p>
+                                                    <p className="project-desc">{t('here_desc')}</p>
                                                     <div className="project-detail">
                                                         <div>
-                                                            <p className="project-role-title">{t('role')}:</p>
+                                                            <p className="project-role-title">{t('role')}：</p>
                                                             <label className="role">{t('web_front_end_dev')}</label>
                                                         </div>
                                                         <div>
-                                                            <p className="project-program-title">Programming Languages：</p>
+                                                            <p className="project-program-title">{t('program_lang')}：</p>
                                                             <label className="programming_language">HTML</label>
                                                             <label className="programming_language">CSS</label>
                                                             <label className="programming_language">Bootstrap</label>
@@ -164,15 +164,15 @@ class Work extends React.Component {
                                                 <img src={bonerp} className="project-img" />
                                                 <div className="project-desc-container">
                                                     <p className="project-title">BonERP</p>
-                                                    <p className="project-desc">Cloud ERP System</p>
+                                                    <p className="project-desc">{t('bonerp_desc')}</p>
                                                     <div className="project-detail">
                                                         <div>
-                                                            <p className="project-role-title">{t('role')}:</p>
+                                                            <p className="project-role-title">{t('role')}：</p>
                                                             <label className="role">{t('web_front_end_dev')}</label>
                                                             <label className="role">{t('web_back_end_dev')}</label>
                                                         </div>
                                                         <div>
-                                                            <p className="project-program-title">Programming Languages：</p>
+                                                            <p className="project-program-title">{t('program_lang')}：</p>
                                                             <label className="programming_language">.NET MVC 5</label>
                                                             <label className="programming_language">MS SQL Server</label>
                                                             <label className="programming_language">HTML</label>

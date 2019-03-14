@@ -7,7 +7,7 @@ import { withNamespaces } from 'react-i18next';
 import { I18nextProvider } from 'react-i18next';
 
 import '../style/layout.scss'
-
+console.log("!!", i18n.language);
 const Layout = ({ children, data, t }) => (
     <I18nextProvider i18n={i18n}>
         <div>

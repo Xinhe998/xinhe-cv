@@ -81,10 +81,18 @@ const About = ({ t }) => (
                         <div className="timeline-content">
                             Intern <b>@ {t('trunk_studio')}</b>
                             <ul>
-                                <li>Participation of ‘<a href="https://viptjob.com" target="_blank">VIPT JOB</a>’ official website(job bank platform for migrant workers and enterprise) development with Vue.js and EJS, also helped to implement i18n. </li>
-                                <li>Participation of ‘<a href="https://itunes.apple.com/tw/app/healthcare%E5%81%A5%E5%BA%B7%E4%BF%9D%E5%81%A5%E5%AE%A4/id1239683214?mt=8" target="_blank">Kbro HealthCare</a>’ mobile app development with React Native. </li>
-                                <li>Familiar with Git, JavaScript, React, EJS. </li>
-                                <li>Familiar working in Scrum.</li>
+                                <li>
+                                    <Trans i18nKey="trunk_dutie1">
+                                        Participation of ‘<a href="https://viptjob.com" target="_blank">VIPT JOB</a>’ official website(job bank platform for migrant workers and enterprise) development with Vue.js and EJS, also helped to implement i18n.
+                                    </Trans> </li>
+                                <li>
+                                    <Trans i18nKey="trunk_dutie2">
+                                        Participation of ‘<a href="https://itunes.apple.com/tw/app/healthcare%E5%81%A5%E5%BA%B7%E4%BF%9D%E5%81%A5%E5%AE%A4/id1239683214?mt=8" target="_blank">Kbro HealthCare</a>’ mobile app development with React Native. 
+                                    </Trans>
+                                    </li>
+                                    
+                                <li>{t('trunk_dutie3')} </li>
+                                <li>{t('trunk_dutie4')}</li>
                             </ul>
                         </div>
                     </li>
@@ -95,13 +103,13 @@ const About = ({ t }) => (
                         <div className="timeline-content">
                             Intern <b>@ {t('taiwan_cloud')}</b>
                             <ul>
-                                <li>Participation of online ERP system project development with HTML, CSS, jQuery, ASP.NET MVC5. </li>
-                                <li>Familiar with ASP.NET MVC 5 and jQuery. </li>
+                                <li>{t('taiwan_cloud_dutie1')}</li>
+                                <li>{t('taiwan_cloud_dutie2')}</li>
                             </ul>
                         </div>
                     </li>
                 </ul>
-                <h1>Awards</h1>
+                <h1>{t('awards')}</h1>
                 <ul className="awards-list">
                     <li><b>{t('student_elite_award')},</b> {t('nutc')}, 2018</li>
                     <li>

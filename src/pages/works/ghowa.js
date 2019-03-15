@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Lightbox from 'react-images';
 import { withI18next } from 'gatsby-plugin-i18next';
 import { withNamespaces, Trans } from 'react-i18next';
+import { Helmet } from "react-helmet";
 
 import '../../style/work.scss'
 import '../../style/work_detail.scss'
@@ -73,6 +74,10 @@ class Ghowa extends React.Component {
         const { t } = this.props;
         return (
             <Layout>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Ghowa - Xinhe Hsu</title>
+                </Helmet>
                 <div id="work-detail-container" onScroll={this.listenScrollEvent.bind(this)}>
 
                     <img src={ghowa} className="project-img" />

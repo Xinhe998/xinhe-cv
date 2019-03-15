@@ -79,12 +79,18 @@ $phones-media:479px;
     font-style: italic;
   }
 
+  @font-face {
+    font-family: "Noto Sans TC";
+    font-style: normal;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf) format("opentype");
+}
+
   
 body {
     background: #f4f4fa;
     margin: 0;
     // overflow: hidden;
-    font-family: gordita,Helvetica Neue,Helvetica,sans-serif;
+    font-family: gordita,'Noto Sans TC';
     #home-page {
         opacity: 0;
         -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
@@ -106,6 +112,9 @@ body {
         justify-content: flex-end;
         .menu {
             a {
+                @media screen and (max-width: $pc-media) {
+                    display: none;
+                }
                 color: #606060;
                 text-decoration: none;
                 margin-left: 50px;

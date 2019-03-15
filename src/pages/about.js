@@ -1,19 +1,22 @@
 import React from "react"
 import Layout from "../components/Layout"
+import { Helmet } from "react-helmet";
 
 import '../style/about.scss'
 import avatar from '../Assets/avatar.jpg'
-
 import advantch_pic from '../Assets/advantech_pic.jpg'
-import { graphql } from 'gatsby';
 
 import { withI18next } from 'gatsby-plugin-i18next';
 import { withNamespaces } from 'react-i18next';
-import { translate, Trans } from "react-i18next"
+import { Trans } from "react-i18next"
 import i18next from "i18next";
 
 const About = ({ t, i18 }) => (
     <Layout>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>About - Xinhe Hsu</title>
+        </Helmet>
         <div id="about-page">
             <div className="intro">
                 <div className="avatar-box">

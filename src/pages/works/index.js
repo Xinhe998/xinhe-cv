@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../../components/Layout"
-// import '../../I18n';
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet";
 
 import { withI18next } from 'gatsby-plugin-i18next';
 import { withNamespaces } from 'react-i18next';
@@ -41,6 +41,10 @@ class Work extends React.Component {
         const { t } = this.props;
         return (
             <Layout>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Work - Xinhe Hsu</title>
+                </Helmet>
                 <div id="work-page">
                     <p className="page-title">WORK</p>
                     <hr />
@@ -189,7 +193,7 @@ class Work extends React.Component {
                             }}
                         </VisibilitySensor>
                     </ul>
-                    
+
                     <div className="email-me">
                         <a href="mailto:xinhe998@gmail.com">xinhe998@gmail.com</a>
                     </div>

@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../../components/Layout"
 import { Link } from "gatsby"
 import Lightbox from 'react-images';
+import { Helmet } from "react-helmet";
+
 import { withI18next } from 'gatsby-plugin-i18next';
 import { withNamespaces, Trans } from 'react-i18next';
 
@@ -10,9 +12,9 @@ import '../../style/work_detail.scss'
 
 import here from '../../Assets/here.png'
 import here_1 from '../../Assets/here-1.png'
-// import here_2 from '../../Assets/here-2.png'
-// import here_3 from '../../Assets/here-3.png'
-// import here_4 from '../../Assets/here-4.png'
+import here_2 from '../../Assets/here-2.jpg'
+import here_3 from '../../Assets/here-3.jpg'
+import here_4 from '../../Assets/here-4.jpg'
 
 class Here extends React.Component {
     constructor(props) {
@@ -74,6 +76,10 @@ class Here extends React.Component {
         const { t, i18n } = this.props;
         return (
             <Layout>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>HERE - Xinhe Hsu</title>
+                </Helmet>
                 <div id="work-detail-container" onScroll={this.listenScrollEvent.bind(this)}>
                     <img src={here} className="project-img" />
                     <div className="project-desc-container">
@@ -114,7 +120,7 @@ class Here extends React.Component {
                         <h1>{t('at_a_glance')}</h1>
                         <div className="image-group">
                             <Lightbox
-                                images={[{ src: here_1 },]}
+                                images={[{ src: here_1 }, { src: here_2 }, { src: here_3 }, { src: here_4 }]}
                                 isOpen={this.state.lightboxIsOpen}
                                 onClickPrev={() => this.lightboxGotoPrevious()}
                                 onClickNext={() => this.lightboxGotoNext()}
@@ -125,6 +131,10 @@ class Here extends React.Component {
                                 showImageCount={false}
                             />
                             <img src={here_1} className="web-screenshot" onClick={() => this.openLightbox(0)} />
+                            <img src={here_2} className="web-screenshot" onClick={() => this.openLightbox(1)} />
+                            <img src={here_3} className="web-screenshot" onClick={() => this.openLightbox(2)} />
+                            <img src={here_4} className="web-screenshot" onClick={() => this.openLightbox(3)} />
+
                         </div>
                         <h1>{t('outcome')}</h1>
                         <p><b>{t('awards')}</b></p>

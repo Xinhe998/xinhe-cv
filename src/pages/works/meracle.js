@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../../components/Layout"
 import { Link } from "gatsby"
 import Lightbox from 'react-images';
+import { Helmet } from "react-helmet";
+
 import { withI18next } from 'gatsby-plugin-i18next';
 import { withNamespaces, Trans } from 'react-i18next';
 
@@ -98,6 +100,10 @@ class Meracle extends React.Component {
         const { t } = this.props;
         return (
             <Layout>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Meracle - Xinhe Hsu</title>
+                </Helmet>
                 <div id="work-detail-container" onScroll={this.listenScrollEvent.bind(this)} >
                     <img src={meracle} className="project-img" />
                     <div className="project-desc-container">

@@ -7,8 +7,9 @@ class Segment extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            lang: typeof localStorage !== 'undefined' && localStorage.getItem('i18nextLng') ? localStorage.getItem('i18nextLng') : 'en'
+            lang: typeof localStorage !== 'undefined' && localStorage.getItem('i18nextLng') && localStorage.getItem('i18nextLng') !=='undefined' ? localStorage.getItem('i18nextLng') : 'en'
         }
+        
     }
     handleChange = (lang) => {
         this.setState({
@@ -17,13 +18,25 @@ class Segment extends React.Component {
         i18n.changeLanguage(lang)
     }
     render() {
+        var checkedLang;
+        switch(this.state.lang) {
+            case 'en': 
+                checkedLang = 'en'
+            break;
+            case 'tw':
+                checkedLang = 'tw'
+            break;
+            default:
+                checkedLang = 'en'
+            break;
+        }
         return (
             <div id="segment" className={this.props.isInSidebar? 'is_in_sidebar' : '' }>
-                <input id="seg1" type="radio" name="radioBtn" checked={this.state.lang === 'en'} onChange={()=> this.handleChange('en')}  />
+                <input id="seg1" type="radio" name="radioBtn" checked={checkedLang === 'en'} onChange={()=> this.handleChange('en')}  />
 
                 <label className="labels" htmlFor="seg1"><span>EN</span></label>
                 
-                <input id="seg2" type="radio" name="radioBtn" checked={this.state.lang === 'tw'} onChange={()=> this.handleChange('tw')} />
+                <input id="seg2" type="radio" name="radioBtn" checked={checkedLang === 'tw'} onChange={()=> this.handleChange('tw')} />
 
                 <label className="labels" htmlFor="seg2"><span>繁中</span></label>
                 

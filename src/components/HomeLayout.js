@@ -13,7 +13,7 @@ const HomeLayout = ({ children }) => (
             <div className="menu">
                 <Link to="works">Work</Link>
                 <Link to="about">About</Link>
-                <Link to="resume">Resume</Link>
+                <a href="https://drive.google.com/open?id=1_M0A04iMMiug4HHgeqgKadRy5zHRZetv" target="_blank">RESUME</a>
             </div>
         </div>
         <div className="content-wrapper">

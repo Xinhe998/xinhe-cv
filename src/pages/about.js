@@ -26,8 +26,13 @@ const About = ({ t, i18 }) => (
                 <p className="name">Xinhe Hsu</p>
             </div>
             <div className="main-content">
-                <p>I am a developer from Taichung, Taiwan. Currently majoring in Information Application at National Taichung University of Science and Technology, I'm focusing on Front-End development.
-                            With solid web development skills, I possess experience as an intern in three companies.</p>
+                <p>{t('self_intro1')} <br/><br/>
+
+{t('self_intro2')}  <br/><br/>
+
+{t('self_intro3')} <br/><br/>
+
+{t('self_intro4')}</p>
                 <h1>{t('skill')}</h1>
                 <p>{t('web_front_end')}</p>
                 <div>

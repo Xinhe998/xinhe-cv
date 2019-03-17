@@ -23,7 +23,7 @@ class Sidebar extends React.Component {
                 <div className="button-container">
                     <Link to="works" className={typeof window !== 'undefined' && window.location.pathname.includes('works') ? 'active' : ''}>WORK</Link>
                     <Link to="about" className={typeof window !== 'undefined' && window.location.pathname.includes('about') ? 'active' : ''}>ABOUT</Link>
-                    <Link to="resume" >RESUME</Link>
+                    <a href="https://drive.google.com/open?id=1_M0A04iMMiug4HHgeqgKadRy5zHRZetv" target="_blank">RESUME</a>
                 </div>
                 <div className="socialmedia-button-container">
                     <div className="icon-container">

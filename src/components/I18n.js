@@ -85,7 +85,7 @@ i18n
           trunk_dutie3: "Familiar with Git, JavaScript, React, EJS.",
           trunk_dutie4: "Familiar working in Scrum.",
           taiwan_cloud_brief1: "In winter 2017, I interned at <1>Taiwan Cloud Corporation</1> with four of my classmates. we helped the development and implement of the ERP system, BonERP. ",
-          taiwan_cloud_brief2: "Common features in ERP such as Purchase, Sales and Inventory were included in BonERP. During this project, I was individually responsible for front-end development, and also support to develop several back-end modules.",
+          taiwan_cloud_brief2: "Common features in ERP such as Purchase, Sales and Inventory were included in BonERP. During this project, I was individually responsible for the front-end development, and also supported to develop several back-end modules.",
           ghowa_brief1: "Ghowa is an <1>{{app}}app that calculates a balance of a group of people who spend money and want to calculate a balance for each participant. </1>It allows user to create infinite groups for managing a list with the shared expenses.",
           ghowa_brief2: "In this project, I collaborated with people from NTUE (National Taipei University of Education Department) of Digital Technology Design to ideate the solution and was individually responsible for building the RESTful API with Node.js and Express.js .",
           ghowa_brief3: "This project is still ongoing and <1>planned to be launched on App Store</1> in summer 2019.",
@@ -94,7 +94,7 @@ i18n
           server: "Server",
           self_intro1: "I'm a curious, enthusiastic, and self-motivated web full-stack developer.",
           self_intro2: "Born and raised in Taiwan, ever since I was a child I've been obsessed with building website on the Internet, and the enthusiasm drives me to focus on learning programming skills. ",
-          self_intro3: "Currently I am majoring in Information Application at National Taichung University of Science and Technology. Since I started the five-year program when I was 15, and got to know more about programming, I have two-year experience on web development and I process experience as an intern in three companies.",
+          self_intro3: "Currently I am majoring in Information Application at National Taichung University of Science and Technology. Since I started the five-year program when I was 15, and got to know more about information literacy, code structure and development process etc., I have two-year experience on web development and I processed experience as an intern in three companies.",
           self_intro4: "In the future, my hope is using the solid programming skills to create a product that become an Indispensable thing in everyone's daily life.",
         },
       },
@@ -177,7 +177,7 @@ i18n
           self_intro1: "我是一個對於技術充滿好奇與熱忱的網頁全端工程師，在學習新的方法或專業技術時總是保持著積極主動的態度。",
           self_intro2: "出生且長大於台灣，自小的時候我就對網路資源以及架設網站有龐大的興趣，而這股對科技的熱情也引領我在長大後開始學習起程式，以實現小時候的夢想。",
           self_intro3: "目前我就讀於國立臺中科技大學的資訊應用菁英班。由於我在15歲即進入了敝校的五專體系，開始精進自己的資訊素養、系統架構、開發流程等更專業的知識，以至於現在的我已經累積了兩年的網頁開發經驗，並且在這兩年之內已有三間企業的軟體開發實習經歷。",
-          self_intro4: "未來的我夢想自己得以利用扎實的程式能力，打造出一套產品，能夠成為每個人生活中不可或缺的工具。"
+          self_intro4: "未來的我夢想自己得以利用扎實的程式能力，打造出一套能夠打動人心的產品，成為每個人生活中不可或缺的工具。"
         },
       },
     },

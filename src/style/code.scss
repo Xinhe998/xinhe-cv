@@ -1,3 +1,9 @@
+$pc-media:960px;
+$pcs-media:959px;
+$pad-media:760px;
+$pads-media:759px;
+$phone-media:480px;
+$phones-media:479px;
 #code-feature-section {
     width: 55%;
     height: 300px;
@@ -6,6 +12,10 @@
     border-radius: 20px;
     position: relative;
     max-width: 460px;
+    @media screen and (max-width: $pc-media) {
+        width: 70%;
+        height: 200px;
+    }
     .header {
         height: 25px;
         background: white;
@@ -13,12 +23,19 @@
         position: relative;
         justify-content: flex-start;
         padding-left: 20px;
+        @media screen and (max-width: $pc-media) {
+            height: 15px;
+        }
         .dot {
             width: 10px;
             height: 10px;
             background-color: #bfbfbf;
             border-radius: 50%;
             margin-right: 10px;
+            @media screen and (max-width: $pc-media) {
+                height: 8px;
+                width: 8px;
+            }
         }
     }
     .content {
@@ -34,12 +51,18 @@
 
             &.block1 {
                 height: 30px;
+                @media screen and (max-width: $pc-media) {
+                    height: 20px;
+                }   
             }
             &.block2, &.block3 {
                 height: 63px;
                 width: calc((100% - 40px) / 2);
                 margin-top: 20px;
                 display: inline-block;
+                @media screen and (max-width: $pc-media) {
+                    height: 40px;
+                }   
             }
             &.block2 {
                 float: left;
@@ -51,16 +74,26 @@
                 height: 10px;
                 margin-top: 100px;
                 width: 45%;
+                @media screen and (max-width: $pc-media) {
+                    height: 8px;
+                    margin-top: 80px;
+                }   
             }
             &.block5 {
                 height: 10px;
                 margin-top: 10px;
                 width: 80%;
+                @media screen and (max-width: $pc-media) {
+                    height: 8px;
+                }   
             }
             &.block6 {
                 height: 10px;
                 margin-top: 10px;
                 width: 60%;
+                @media screen and (max-width: $pc-media) {
+                    height: 8px;
+                }   
             }
         }
         .motto {
@@ -86,7 +119,9 @@
             animation: fadein 2s;
             animation-delay: 2s;
             animation-fill-mode: forwards;  
-                 
+            @media screen and (max-width: $pc-media) {
+                font-size: 18px;
+            }     
             p {
                 top: 40%;
                 margin: 0px 0;

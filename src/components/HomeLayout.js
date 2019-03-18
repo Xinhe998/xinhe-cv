@@ -6,14 +6,16 @@ import githubImg from '../Assets/github.png'
 import linkdinImg from '../Assets/linkdin.png'
 import mediumImg from '../Assets/medium.png'
 import '../style/index.scss'
+import MobileSidebar from './MobileSidebar'
 
 const HomeLayout = ({ children }) => (
     <div id="home-page">
+    <MobileSidebar />
         <div className="header">
             <div className="menu">
                 <Link to="works">Work</Link>
                 <Link to="about">About</Link>
-                <a href="https://drive.google.com/open?id=1_M0A04iMMiug4HHgeqgKadRy5zHRZetv" target="_blank">RESUME</a>
+                <a href="https://drive.google.com/open?id=1_M0A04iMMiug4HHgeqgKadRy5zHRZetv" target="_blank">Resume</a>
             </div>
         </div>
         <div className="content-wrapper">

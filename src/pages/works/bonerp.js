@@ -82,6 +82,8 @@ class BonErp extends React.Component {
                 <Helmet>
                     <meta charSet="utf-8" />
                     <title>BonERP - Xinhe Hsu</title>
+                    <meta name="description" content="A Web Developer, always keeping up with new trends in tech." />
+                    <meta name="keywords" content="工程師,前端,網頁,React,JavaScript,CSS,GatsbyJS,作品集,履歷,軟體開發" />
                 </Helmet>
                 <div id="work-detail-container" onScroll={this.listenScrollEvent.bind(this)}>
                     <img src={bonerp} className="project-img" />

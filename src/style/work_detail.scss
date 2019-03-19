@@ -1,3 +1,9 @@
+$pc-media:960px;
+$pcs-media:959px;
+$pad-media:760px;
+$pads-media:759px;
+$phone-media:480px;
+$phones-media:479px;
 .sticky {
     position: fixed !important;
     top: -10px;
@@ -8,6 +14,12 @@
     width: calc(100vw - 250px - 56px);
     transition: all .02s;
     animation: sticky_fadein .8s ease-in;
+
+    @media screen and (max-width: $pc-media) {
+        width: calc(100vw - 56px);
+        left: 28px;
+    }
+    
     .project-title {
         text-align: center;
     }

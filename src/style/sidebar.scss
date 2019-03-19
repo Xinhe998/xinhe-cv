@@ -1,4 +1,9 @@
-
+$pc-media:960px;
+$pcs-media:959px;
+$pad-media:760px;
+$pads-media:759px;
+$phone-media:480px;
+$phones-media:479px;
 #sidebar {
     top: 0;
     bottom: 0;
@@ -21,7 +26,9 @@
     display: inline-block;
     float: left;
     overflow: hidden;
-
+    @media screen and (max-width: $pc-media) {
+        left: -250px;
+    }
     #segment {
         color: white;
         letter-spacing: 0.9px;

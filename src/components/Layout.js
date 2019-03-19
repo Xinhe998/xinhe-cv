@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from 'prop-types';
 import Sidebar from './Sidebar'
 import { Helmet } from "react-helmet";
+import MobileSidebar from './MobileSidebar'
 
 import i18n from './I18n'
 import { withNamespaces } from 'react-i18next';
@@ -15,6 +16,7 @@ const Layout = ({ children, data, t }) => (
             <title>Xinhe Hsu</title>
         </Helmet>
         <div>
+            <MobileSidebar/>
             <Sidebar />
             <div className="layout-content">
                 {children}

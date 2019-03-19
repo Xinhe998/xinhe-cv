@@ -1,7 +1,17 @@
+$pc-media:960px;
+$pcs-media:959px;
+$pad-media:760px;
+$pads-media:759px;
+$phone-media:480px;
+$phones-media:479px;
 .layout-content {
     display: inline-block;
     width: calc(100vw - 250px);
-    margin-left: 250px;
+	margin-left: 250px;
+	@media screen and (max-width: $pc-media) {
+		margin-left: 0px;
+		width: 100vw;
+    }
     .page-title {
         font-size: 20px;
         font-weight: bold;

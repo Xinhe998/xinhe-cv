@@ -12,12 +12,14 @@ $phones-media:479px;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     background-image: linear-gradient(192deg, rgba(129, 160, 193, 0.9), rgba(178, 118, 131, 0.81));
-    display: flex;
+    // display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     display: none;
     transition: all 1s ease-in-out;
+    -webkit-user-select: none;   /* for Chrome */
+    -moz-user-select: none;  /* for Firefox */ 
     .button-container {
         z-index: 1000;
     }
@@ -34,7 +36,20 @@ $phones-media:479px;
         display: block;
         margin-bottom: 30px;
     }
-   
+   .icon-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 200px;
+        justify-content: space-between;
+        margin-top: 50px;
+        a {
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+   }
 }
 #menuTogglerLabel {
     position: absolute;
@@ -45,6 +60,7 @@ $phones-media:479px;
     z-index: 1000;
     @media screen and (min-width: $pc-media) {
         display: none;
+        animation: fadeout 1s;
     }
     .menu-toggler-line {
         background: #707070;
@@ -77,8 +93,60 @@ $phones-media:479px;
                 transform-origin: -5px 0px;
               }
         }
+        &.closing {
+            .menu-toggler-line {
+                background: #707070;
+                &:first-child {
+                    transform: unset;
+                    transform-origin: unset;
+                  }
+                  &:nth-child(2) {
+                    opacity: 1;
+                  }
+                  &:nth-child(3) {
+                    transform: unset;
+                    transform-origin: unset;
+                  }
+            }
+        }
     }
     &:checked ~ .mobile_sidebar_content {
         display: flex;
+        animation: fadein .5s;
     }
+    &:checked ~ .mobile_sidebar_content.closing {
+        animation: fadeout .5s;
+    }
+}
+@-webkit-keyframes fadein {
+	from {
+        opacity: 0;
+	}
+	to {
+        opacity: 1;
+	}
+}
+@keyframes fadein {
+	from {
+        opacity: 0;
+	}
+	to {
+        opacity: 1;
+	}
+}
+@-webkit-keyframes fadeout {
+	from {
+        opacity: 1;
+	}
+	to {
+        opacity: 0;
+	}
+}
+@keyframes fadeout {
+	from {
+        opacity: 1;
+	}
+	to {
+        opacity: 0;
+	}
 }

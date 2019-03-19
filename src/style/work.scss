@@ -1,3 +1,9 @@
+$pc-media:960px;
+$pcs-media:959px;
+$pad-media:760px;
+$pads-media:759px;
+$phone-media:480px;
+$phones-media:479px;
 body:has(#work-page) {
     overflow: hidden;
 }
@@ -44,7 +50,9 @@ body:has(#work-page) {
             padding-right: 50px;
             word-break: keep-all;
             opacity: 0;
-
+            @media screen and (max-width: $phone-media) {
+                width: unset;
+            }
             
 
             &:before {
@@ -74,6 +82,9 @@ body:has(#work-page) {
             overflow: hidden;
             padding-bottom: 40px;
             opacity: 0;
+            @media screen and (max-width: $phone-media) {
+                width: unset;
+            }
             // -webkit-animation: fadein 2s, scaleUp .8s; /* Safari, Chrome and Opera > 12.1 */
             // -moz-animation: fadein 2s, scaleUp .8s; /* Firefox < 16 */
             // -ms-animation: fadein 2s, scaleUp .8s; /* Internet Explorer */
@@ -109,6 +120,9 @@ body:has(#work-page) {
     word-break: break-all;
     word-wrap: normal;
     max-width: calc(70% - 50px);
+    @media screen and (max-width: $phone-media) {
+        max-width: unset;
+    }
     div {
         margin-top: 10px;
     }

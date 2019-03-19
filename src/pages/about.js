@@ -25,7 +25,7 @@ const About = ({ t, i18 }) => (
                     <img className="avatar" src={avatar} />
                 </div>
                 <div className="circle"></div>
-                <p className="name">Xinhe Hsu</p>
+                <p className="name">Xinhe Hsu<br />{t('chinese_name')}</p>
             </div>
             <div className="main-content">
                 <p>{t('self_intro1')} <br/><br/>

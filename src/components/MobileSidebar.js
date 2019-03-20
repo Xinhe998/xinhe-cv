@@ -14,7 +14,7 @@ class MobileSidebar extends React.Component {
         super(props);
         this.state = {
             menuIsOpen : false,
-            isMobile: typeof window !== 'undefined' & window.innerWidth < 960
+            isMobile: typeof window !== 'undefined' && window.innerWidth < 960
         }
     }
     menuClick = () => {
@@ -44,7 +44,7 @@ class MobileSidebar extends React.Component {
         window.removeEventListener("resize", this.windowResize);
     }
     windowResize = () => {
-        var isMobile = typeof window !== 'undefined' & window.innerWidth < 960;
+        var isMobile = typeof window !== 'undefined' && window.innerWidth < 960;
         if(isMobile) {
             this.setState({
                 isMobile: true
@@ -68,10 +68,10 @@ class MobileSidebar extends React.Component {
                 <div className="mobile_sidebar_content">
                     {this.state.isMobile && isInnerPage ? <Segment/> : null}
                     <div className="button-container">
-                        {isInnerPage ? <Link to="/">HOME</Link> : null}
+                        {isInnerPage ? <Link to="/">HOME</Link> : null} 
                         <Link to="works">WORK</Link>
                         <Link to="about">ABOUT</Link>
-                        <Link to="resume" >RESUME</Link>
+                        <a href="https://drive.google.com/open?id=1_M0A04iMMiug4HHgeqgKadRy5zHRZetv" target="_blank">RESUME</a>
                     </div>
                     <div className="icon-container">
                         <a href="https://github.com/Xinhe998" >

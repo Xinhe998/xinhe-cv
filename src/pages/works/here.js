@@ -41,12 +41,15 @@ class Here extends React.Component {
         var header = document.getElementById("be-header-when-scroll");
         var sticky = document.querySelector(".project-desc-container").offsetTop;
         var h = document.querySelector(".project-desc-container").offsetHeight;
-
+        var isMobile = typeof window !== 'undefined' && window.innerWidth < 960;
         if (window.pageYOffset > (sticky + h)) {
-            container.classList.add("notransition");
-            header.classList.add("sticky");
+            if (!isMobile) {
+                container.classList.add("notransition");
+                header.classList.add("sticky");
+            }
             // document.querySelector(".project-detail_content").style.marginTop = '150px';
         } else {
+            if (!isMobile)
             header.classList.remove("sticky");
             // document.querySelector(".project-detail_content").style.marginTop = '38px';
         }

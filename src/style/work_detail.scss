@@ -24,7 +24,9 @@ $phones-media:479px;
         text-align: center;
     }
     .close-btn {
-        top: 5px !important;
+        @media screen and (min-width: $pc-media) {
+            top: 5px !important;
+        }
     }
     & ~ .project-detail_content {
         transition: all .2s;
@@ -62,11 +64,12 @@ $phones-media:479px;
     -o-animation: contentScaleUp .5s; /* Opera < 12.1 */
     animation: contentScaleUp .5s;
     animation-fill-mode: forwards;  
-    
+    @media screen and (max-width: $pc-media) {
+        margin: 80px 28px 0px;
+    }
     
     .close-btn {
         right: 60px;
-        top: 45px;
         width: 32px;
         height: 32px;
         opacity: 0.6;
@@ -74,7 +77,14 @@ $phones-media:479px;
         cursor: pointer;
         background-image: linear-gradient(to bottom, #f1f9ff, #e2e7f5 3%, #ecdbdb);
         border-radius: 50%;
-        transition: all .5s;
+        // transition: all .5s;
+        @media screen and (min-width: $pc-media) {
+            top: 45px;
+        }
+        @media screen and (max-width: $pc-media) {
+            top: 45px;
+        }
+
         &:before, &:after {
             position: absolute;
             left: 15px;

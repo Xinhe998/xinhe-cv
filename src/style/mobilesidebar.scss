@@ -52,28 +52,24 @@ $segment-label-width: 80px;
         }
    }
    #segment {
-        color: white;
         margin-bottom: 50px;
-        input:checked + label {
-            color: #606060;
-        }
        & label:last-of-type {
-        -webkit-transform: translatey(-0.8px) perspective(300px) rotateX(30deg);
-        -o-transform: translatey(-0.8px) perspective(300px) rotateX(30deg);
-        -moz-transform: translatey(-0.8px) perspective(300px) rotateX(30deg);
+            -webkit-transform: translatey(-0.8px) perspective(300px) rotateX(30deg);
+            -o-transform: translatey(-0.8px) perspective(300px) rotateX(30deg);
+            -moz-transform: translatey(-0.8px) perspective(300px) rotateX(30deg);
        }
        #seg2:checked ~ #bckgrnd {
-        width: $segment-label-width + 1px;
-        transition: all 0.1s ease-in-out;
-        -webkit-transform: translatey(-0.8px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
-        -o-transform: translatey(-0.8px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
-        -moz-transform: translatey(-0.8px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
-        -webkit-transform-origin: 100% 50%;
-        -moz-transform-origin: 100% 50%;
-        -o-transform-origin: 100% 50%;
-        transform-origin: 100% 50%;
-        border-radius: 0 10px 10px 0;
-    }
+            width: $segment-label-width + 1px;
+            transition: all 0.1s ease-in-out;
+            -webkit-transform: translatey(-0.8px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
+            -o-transform: translatey(-0.8px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
+            -moz-transform: translatey(-0.8px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
+            -webkit-transform-origin: 100% 50%;
+            -moz-transform-origin: 100% 50%;
+            -o-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+            border-radius: 0 10px 10px 0;
+        }
    }
 }
 #menuTogglerLabel {

@@ -1,5 +1,10 @@
+$pc-media:960px;
+$pcs-media:959px;
+$pad-media:760px;
+$pads-media:759px;
+$phone-media:480px;
+$phones-media:479px;
 #about-page {
-    
     overflow: hidden;
     .intro {
         display: flex;
@@ -83,7 +88,9 @@
         animation-fill-mode: forwards;  
         position: absolute;
         top: 100%;
-
+        @media screen and (max-width: $pc-media) {
+            margin: 5px 3px 40px;
+        }
         
         h1 {
             font-size: 16px;
@@ -143,6 +150,33 @@
                 list-style: none;
                 display: flex;
                 align-items: center;
+                @media screen and (max-width: $pc-media) {
+                    flex-direction: column;
+                    .timeline-date {
+                        width: 100%;
+                        padding: unset;
+                        margin: 0;
+                        p {
+                            padding-left: 40px;
+                            font-weight: bold;
+                        }
+                        &:before {
+                            content: '';
+                            width: 15px;
+                            height: 15px;
+                            background: #ecdbdb;
+                            position: absolute;
+                            margin-top: 20px;
+                            margin-left: 15px;
+                            border-radius: 100%;
+                            left: 0;
+                        }
+                    }
+                    .timeline-content {
+                        width: 100%;
+                        padding-left: unset;
+                    }
+                }
             }
             .timeline-date {
                 font-size: 14px;
@@ -156,15 +190,17 @@
                 word-break: keep-all;
                 justify-content: flex-start;
                 width: 18%;
-                &:after {
-                    content: '';
-                    width: 15px;
-                    height: 15px;
-                    background: #ecdbdb;
-                    position: absolute;
-                    margin-left: 44px;
-                    margin-top: -33px;
-                    border-radius: 100%;
+                @media screen and (min-width: $pc-media) {
+                    &:after {
+                        content: '';
+                        width: 15px;
+                        height: 15px;
+                        background: #ecdbdb;
+                        position: absolute;
+                        margin-left: 44px;
+                        margin-top: -33px;
+                        border-radius: 100%;
+                    }
                 }
             }
             .timeline-content {
@@ -182,6 +218,9 @@
                 font-weight: normal;
                 width: 60%;
                 justify-content: flex-end;
+                @media screen and (max-width: $pc-media) {
+                    border-left: none;
+                }
 
                 a {
                     font-size: 12px;
@@ -215,7 +254,7 @@
                 }
                 .image-hover {
                     position:relative;
-                    width:200px;
+                    max-width:200px;
                     height:150px;
                     display:inline-block;
                     overflow:hidden;

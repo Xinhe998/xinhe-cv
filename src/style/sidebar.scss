@@ -30,14 +30,9 @@ $phones-media:479px;
         left: -250px;
     }
     #segment {
-        color: white;
         letter-spacing: 0.9px;
         font-weight: normal;
         margin-top: 30px;
-
-        input:checked + label {
-            color: #606060;
-        }
     }
     .text-container {
         color: white;

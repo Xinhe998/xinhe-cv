@@ -27,7 +27,7 @@
     display: inline-block;
     position: relative;
     z-index: 5;
-    color: #606060;
+    color: white;
     font-size: $segment-font-size;
     letter-spacing: 0.9px;
     line-height: $segment-line-height;
@@ -37,6 +37,11 @@
 
     input[type="radio"] {
         display: none;
+    }
+    input[type="radio"]:checked {
+        & + label {
+            color: #606060;
+        }
     }
       
     #bckgrnd,
@@ -102,6 +107,7 @@
         -o-transform-origin: 0% 50%;
         transform-origin: 0% 50%;
         border-radius: 10px 0 0 10px;
+        color: #606060;
     }
     #seg2:checked ~ #bckgrnd {
         width: $segment-label-width + 1px;
@@ -114,6 +120,7 @@
         -o-transform-origin: 100% 50%;
         transform-origin: 100% 50%;
         border-radius: 0 10px 10px 0;
+        color: #606060;
     }
 
 }

@@ -11,7 +11,7 @@ class Sidebar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isMobile: typeof window !== 'undefined' & window.innerWidth < 960
+            isMobile: typeof window !== 'undefined' && window.innerWidth < 960
         }
     }
     componentDidMount() {
@@ -21,7 +21,7 @@ class Sidebar extends React.Component {
         window.removeEventListener("resize", this.windowResize);
     }
     windowResize = () => {
-        var isMobile = typeof window !== 'undefined' & window.innerWidth < 960;
+        var isMobile = typeof window !== 'undefined' && window.innerWidth < 960;
         if(isMobile) {
             this.setState({
                 isMobile: true

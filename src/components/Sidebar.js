@@ -10,11 +10,32 @@ import mediumImg from '../Assets/medium.png'
 class Sidebar extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            isMobile: typeof window !== 'undefined' & window.innerWidth < 960
+        }
+    }
+    componentDidMount() {
+        window.addEventListener("resize", this.windowResize);
+    }
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.windowResize);
+    }
+    windowResize = () => {
+        var isMobile = typeof window !== 'undefined' & window.innerWidth < 960;
+        if(isMobile) {
+            this.setState({
+                isMobile: true
+            })
+        } else {
+            this.setState({
+                isMobile: false
+            })
+        }
     }
     render() {
         return (
             <div id="sidebar">
-                <Segment isInSidebar={true} />
+                {!this.state.isMobile ? <Segment isInSidebar={true} /> : null }
                 <div className="text-container">
                     <p>Hi, I’m</p>
                     <p><Link to="/">Xinhe Hsu</Link></p>

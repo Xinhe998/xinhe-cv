@@ -13,7 +13,8 @@ class MobileSidebar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            menuIsOpen : false
+            menuIsOpen : false,
+            isMobile: typeof window !== 'undefined' & window.innerWidth < 960
         }
     }
     menuClick = () => {
@@ -36,10 +37,28 @@ class MobileSidebar extends React.Component {
             
         }
     }
+    componentDidMount() {
+        window.addEventListener("resize", this.windowResize);
+    }
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.windowResize);
+    }
+    windowResize = () => {
+        var isMobile = typeof window !== 'undefined' & window.innerWidth < 960;
+        if(isMobile) {
+            this.setState({
+                isMobile: true
+            })
+        } else {
+            this.setState({
+                isMobile: false
+            })
+        }
+    }
     render() {
+        var isInnerPage = typeof window !== 'undefined' && (window.location.pathname.includes('works') || window.location.pathname.includes('about'));
         return (
             <div id="mobile_sidebar">
-
                 <input type="checkbox" id="menuToggler" class="input-toggler" value="1" autofocus="true"  checked={this.state.menuIsOpen} />
                 <label id="menuTogglerLabel" class="menu-toggler" role="button" aria-pressed="false" aria-expanded="false" aria-label="Navigation button"  onClick={()=> this.menuClick()}>
                     <span class="menu-toggler-line"></span>
@@ -47,9 +66,11 @@ class MobileSidebar extends React.Component {
                     <span class="menu-toggler-line"></span>
                 </label>
                 <div className="mobile_sidebar_content">
+                    {this.state.isMobile && isInnerPage ? <Segment/> : null}
                     <div className="button-container">
-                        <Link to="works" className={typeof window !== 'undefined' && window.location.pathname.includes('works') ? 'active' : ''}>WORK</Link>
-                        <Link to="about" className={typeof window !== 'undefined' && window.location.pathname.includes('about') ? 'active' : ''}>ABOUT</Link>
+                        {isInnerPage ? <Link to="/">HOME</Link> : null}
+                        <Link to="works">WORK</Link>
+                        <Link to="about">ABOUT</Link>
                         <Link to="resume" >RESUME</Link>
                     </div>
                     <div className="icon-container">

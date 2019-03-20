@@ -4,6 +4,7 @@ $pad-media:760px;
 $pads-media:759px;
 $phone-media:480px;
 $phones-media:479px;
+$segment-label-width: 80px;
 .mobile_sidebar_content {
     position: absolute;
     z-index: 100;
@@ -24,12 +25,12 @@ $phones-media:479px;
         z-index: 1000;
     }
     a {
-        font-size: 25px;
-        font-weight: normal;
+        font-size: 20px;
+        font-weight: 500;
         font-style: normal;
         font-stretch: normal;
         line-height: 1.13;
-        lette-spacing: 2.1px;
+        letter-spacing: 2.5px;
         text-align: center;
         color: #ffffff;
         text-decoration: none;
@@ -49,6 +50,30 @@ $phones-media:479px;
                 height: 40px;
             }
         }
+   }
+   #segment {
+        color: white;
+        margin-bottom: 50px;
+        input:checked + label {
+            color: #606060;
+        }
+       & label:last-of-type {
+        -webkit-transform: translatey(-0.8px) perspective(300px) rotateX(30deg);
+        -o-transform: translatey(-0.8px) perspective(300px) rotateX(30deg);
+        -moz-transform: translatey(-0.8px) perspective(300px) rotateX(30deg);
+       }
+       #seg2:checked ~ #bckgrnd {
+        width: $segment-label-width + 1px;
+        transition: all 0.1s ease-in-out;
+        -webkit-transform: translatey(-0.8px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
+        -o-transform: translatey(-0.8px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
+        -moz-transform: translatey(-0.8px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
+        -webkit-transform-origin: 100% 50%;
+        -moz-transform-origin: 100% 50%;
+        -o-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        border-radius: 0 10px 10px 0;
+    }
    }
 }
 #menuTogglerLabel {

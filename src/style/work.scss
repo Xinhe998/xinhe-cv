@@ -50,11 +50,13 @@ body:has(#work-page) {
             padding-right: 50px;
             word-break: keep-all;
             opacity: 0;
-            @media screen and (max-width: $phone-media) {
-                width: unset;
+            @media screen and (max-width: 1090px) {
+                width: 100%;
+                display: flex;
+                margin-top: 25px;
+                margin-bottom: 10px;
             }
-            
-
+        
             &:before {
                 content: '';
                 width: 15px;
@@ -64,6 +66,9 @@ body:has(#work-page) {
                 left: -24px;
                 margin-top: 25px;
                 border-radius: 100%;
+                @media screen and (max-width: 1090px) {
+                    margin-top: 12px;
+                }
             }
         }
         .timeline-content {
@@ -78,12 +83,16 @@ body:has(#work-page) {
             cursor: pointer;
             transition: all .5s;
             padding-left: 35px;
+            padding-right: 35px;
             padding-top: 20px;
             overflow: hidden;
             padding-bottom: 40px;
             opacity: 0;
-            @media screen and (max-width: $phone-media) {
-                width: unset;
+            @media screen and (max-width: 1090px) {
+                width: calc(100% - 70px);
+            }
+            @media screen and (max-width: $pc-media) {
+                width: calc(100% - 50px);
             }
             // -webkit-animation: fadein 2s, scaleUp .8s; /* Safari, Chrome and Opera > 12.1 */
             // -moz-animation: fadein 2s, scaleUp .8s; /* Firefox < 16 */
@@ -120,7 +129,7 @@ body:has(#work-page) {
     word-break: break-all;
     word-wrap: normal;
     max-width: calc(70% - 50px);
-    @media screen and (max-width: $phone-media) {
+    @media screen and (max-width: 580px) {
         max-width: unset;
     }
     div {

@@ -12,11 +12,13 @@
         $segment-line-height: .6;
         label {
             &:first-of-type{
+                transform: perspective(300px) rotateX(-30deg) translateY(-1px);
                 -webkit-transform: perspective(300px) rotateX(-30deg) translateY(-1px);
                 -o-transform: perspective(300px) rotateX(-30deg) translateY(-1px);
                 -moz-transform: perspective(300px) rotateX(-30deg) translateY(-1px);
             }
             #seg1:checked ~ #bckgrnd {
+                transform: translateX(0) perspective(300px) rotateX(-30deg) scaleY(0.7) translateY(-1.5px);
                 -webkit-transform: translateX(0) perspective(300px) rotateX(-30deg) scaleY(0.7) translateY(-1.5px);
                 -o-transform: translateX(0) perspective(300px) rotateX(-30deg) scaleY(0.7) translateY(-1.5px);
                 -moz-transform:  translateX(0) perspective(300px) rotateX(-30deg) scaleY(0.7) translateY(-1.5px);
@@ -58,6 +60,7 @@
     }
     label {
         &:first-of-type{
+            transform: perspective(300px) rotateX(-30deg);
             -webkit-transform: perspective(300px) rotateX(-30deg);
             -o-transform: perspective(300px) rotateX(-30deg);
             -moz-transform: perspective(300px) rotateX(-30deg);
@@ -68,6 +71,7 @@
             border-radius: 10px 0 0 10px;
         }
         &:last-of-type {
+            transform: translatey(-1.5px) perspective(300px) rotateX(30deg);
             -webkit-transform: translatey(-1.5px) perspective(300px) rotateX(30deg);
             -o-transform: translatey(-1.5px) perspective(300px) rotateX(30deg);
             -moz-transform: translatey(-1.5px) perspective(300px) rotateX(30deg);
@@ -86,6 +90,7 @@
         top: 0;
         z-index: -1;
         transition: all 0.1s ease-in-out;
+        transform: translatey(2px) translateX(0) perspective(300px) rotateX(-30deg);
         -webkit-transform: translatey(2px) translateX(0) perspective(300px) rotateX(-30deg);
         -o-transform: translatey(2px) translateX(0) perspective(300px) rotateX(-30deg);
         -moz-transform:  translatey(2px) translateX(0) perspective(300px) rotateX(-30deg);
@@ -99,6 +104,7 @@
     #seg1:checked ~ #bckgrnd {
         height: $segment-label-height - 3px;
         transition: all 0.1s ease-in-out;
+        transform: translatey(1.5px) translateX(0) perspective(300px) rotateX(-30deg);
         -webkit-transform: translatey(1.5px) translateX(0) perspective(300px) rotateX(-30deg);
         -o-transform: translatey(1.5px) translateX(0) perspective(300px) rotateX(-30deg);
         -moz-transform:  translatey(1.5px) translateX(0) perspective(300px) rotateX(-30deg);
@@ -112,6 +118,7 @@
     #seg2:checked ~ #bckgrnd {
         width: $segment-label-width + 1px;
         transition: all 0.1s ease-in-out;
+        transform: translatey(-1.5px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
         -webkit-transform: translatey(-1.5px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
         -o-transform: translatey(-1.5px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
         -moz-transform: translatey(-1.5px) translateX($segment-label-width) perspective(300px) rotateX(30deg);

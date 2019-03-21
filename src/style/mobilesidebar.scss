@@ -54,13 +54,21 @@ $segment-label-width: 80px;
    #segment {
         margin-bottom: 50px;
        & label:last-of-type {
+            transform: translatey(-0.8px) perspective(300px) rotateX(30deg);
             -webkit-transform: translatey(-0.8px) perspective(300px) rotateX(30deg);
             -o-transform: translatey(-0.8px) perspective(300px) rotateX(30deg);
             -moz-transform: translatey(-0.8px) perspective(300px) rotateX(30deg);
        }
+       #seg1:checked ~ #bckgrnd {
+            transform: translatey(0.5px) translateX(0) perspective(300px) rotateX(-30deg);
+            -webkit-transform: translatey(0.5px) translateX(0) perspective(300px) rotateX(-30deg);
+            -o-transform: translatey(0.5px) translateX(0) perspective(300px) rotateX(-30deg);
+            -moz-transform: translatey(0.5px) translateX(0) perspective(300px) rotateX(-30deg);
+       }
        #seg2:checked ~ #bckgrnd {
             width: $segment-label-width + 1px;
             transition: all 0.1s ease-in-out;
+            transform: translatey(-0.8px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
             -webkit-transform: translatey(-0.8px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
             -o-transform: translatey(-0.8px) translateX($segment-label-width) perspective(300px) rotateX(30deg);
             -moz-transform: translatey(-0.8px) translateX($segment-label-width) perspective(300px) rotateX(30deg);

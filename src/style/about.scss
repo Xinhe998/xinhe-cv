@@ -51,6 +51,7 @@ $phones-media:479px;
         .avatar {
             width: 150px;
             height: 150px;
+            clip-path: circle(65px at center);
             -webkit-clip-path: circle(65px at center);
             /* clip-path: circle(65px at center); */
             /* display: inline-block; */
@@ -90,6 +91,14 @@ $phones-media:479px;
         top: 100%;
         @media screen and (max-width: $pc-media) {
             margin: 5px 3px 40px;
+        }
+        @media screen and (max-width: $phone-media) {
+            -webkit-animation: SlideToTopInMobile .5s; /* Safari, Chrome and Opera > 12.1 */
+            -moz-animation: SlideToTopInMobile .5s; /* Firefox < 16 */
+            -ms-animation: SlideToTopInMobile .5s; /* Internet Explorer */
+            -o-animation: SlideToTopInMobile .5s; /* Opera < 12.1 */
+            animation: SlideToTopInMobile .5s;
+            animation-fill-mode: forwards;  
         }
         
         h1 {
@@ -438,7 +447,19 @@ $phones-media:479px;
 	to {
         position: absolute;
         transition: top 500ms cubic-bezier(0.47, 0, 0.75, 0.72) .5s;
-		top: 40%
+        top: 40%;
+	}
+}
+@keyframes SlideToTopInMobile {
+	from {
+        position: absolute;
+        transition: top 500ms cubic-bezier(0.47, 0, 0.75, 0.72) .5s;
+        top: 100%
+	}
+	to {
+        position: absolute;
+        transition: top 500ms cubic-bezier(0.47, 0, 0.75, 0.72) .5s;
+        top: 45%;
 	}
 }
 

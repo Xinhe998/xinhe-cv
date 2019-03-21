@@ -61,9 +61,9 @@ class MobileSidebar extends React.Component {
             <div id="mobile_sidebar">
                 <input type="checkbox" id="menuToggler" className="input-toggler" value={1} autoFocus={true}  checked={this.state.menuIsOpen} />
                 <label id="menuTogglerLabel" className="menu-toggler" role="button" aria-pressed="false" aria-expanded="false" aria-label="Navigation button"  onClick={()=> this.menuClick()}>
-                    <span class="menu-toggler-line"></span>
-                    <span class="menu-toggler-line"></span>
-                    <span class="menu-toggler-line"></span>
+                    <span className="menu-toggler-line"></span>
+                    <span className="menu-toggler-line"></span>
+                    <span className="menu-toggler-line"></span>
                 </label>
                 <div className="mobile_sidebar_content">
                     {this.state.isMobile && isInnerPage ? <Segment/> : null}

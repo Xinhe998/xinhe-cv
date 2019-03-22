@@ -64,6 +64,10 @@ const About = ({ t, i18 }) => (
                 <div>
                     <label className="blue">IIS</label>
                 </div>
+                <p>{t('others')}</p>
+                <div>
+                    <label className="pink">Selenium</label>
+                </div>
                 <h1>{t('experience')}</h1>
                 <ul className="timeline-container">
                     <li className="timeline-milestone">

@@ -96,7 +96,8 @@ i18n
           self_intro2: "Born and raised in Taiwan, ever since I was a child I've been obsessed with building website on the Internet, and the enthusiasm drives me to focus on learning programming skills. ",
           self_intro3: "Currently I am majoring in Information Application at National Taichung University of Science and Technology. Since I started the five-year program when I was 15, and got to know more about information literacy, code structure and development process etc., I have two-year experience on web development and I processed experience as an intern in three companies.",
           self_intro4: "In the future, my hope is using the solid programming skills to create a product that become an Indispensable thing in everyone's daily life.",
-          chinese_name: ""
+          chinese_name: "",
+          others: "Others"
         },
       },
       tw: {
@@ -179,7 +180,8 @@ i18n
           self_intro2: "出生且長大於台灣，自小的時候我就對網路資源以及架設網站有龐大的興趣，而這股對科技的熱情也引領我在長大後開始學習起程式，以實現小時候的夢想。",
           self_intro3: "目前我就讀於國立臺中科技大學的資訊應用菁英班。由於我在15歲即進入了敝校的五專體系，開始精進自己的資訊素養、系統架構、開發流程等更專業的知識，因此現在的我已經累積了兩年的網頁開發經驗，並且在這兩年之內已有三間企業的軟體開發實習經歷。",
           self_intro4: "未來的我夢想自己得以利用扎實的程式能力，打造出一套能夠打動人心的產品，成為每個人生活中不可或缺的工具！",
-          chinese_name: "許歆荷"
+          chinese_name: "許歆荷",
+          others: "其他"
         },
       },
     },

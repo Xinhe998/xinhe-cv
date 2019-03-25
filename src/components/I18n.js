@@ -75,7 +75,7 @@ i18n
           here_overview1: "Database Course Team Project",
           meracle_brief1: "Meracle is <1>{{desc}} a platform that trains and tracks memory for young-learners.</1> It captures brain wave by Neurosky MindWave Mobile Headset, quantizes the working memory with algorithm, and provides various charts and data for parents. Meracle aims to improve the working memory for young-learners.",
           meracle_brief2: "Our team consisted of four peoples, completed this project with an app by cross-platform mobile framework React Native, a web system by React.js, and RESTful API by ASP.NET API 2. I participate in all processes, but I especially contributed the most to web front-end development.",
-          here_brief1: "HERE is <1>a website platform based around the concept of bartering. </1>The inspiration comes from the story that started with the trading of a paper clip and ended with a house. HERE aims to <3>H</3>elp <5>E</5>veryone, <7>R</7>euse <9>E</9>verything. It allows donors that have different demands include releasing ending inventory in an enterprise, contributing unwanted item in home etc.",
+          here_brief1: "HERE is <1>a website platform based around the concept of bartering. </1>The inspiration comes from the story that started with the trading of a paper clip and ended with a house. HERE aims to <3>H</3>elp <5>E</5>veryone, <7>R</7>euse <9>E</9>verything. It allows donors that have different demands, such as releasing ending inventory in an enterprise, contributing unwanted item in home, to post the stuff online.",
           here_brief2: "This is the first time I ideated, planned, developed a complete web system and writed system analysis documents with team by ourselves. I participate in all processes, but I especially contributed the most to web front-end development.",
           meracle_motivation: "There are plenty of memory training methods glutted with the market today, but there is no any system can perfectly analysis, track and quantize memory. So that's why we developed a brainwave memory assessment training system for schoolchildren. This project is based on the memory test provided by the Hong Kong Academy of Memory as an indicator, combined with the N-back theory. And designed to verify that this system is effective in improving children's memory.",
           taiwan_cloud_dutie1: "Participation of online ERP system project development with HTML, CSS, jQuery, ASP.NET MVC 5.",
@@ -97,7 +97,10 @@ i18n
           self_intro3: "Currently I am majoring in Information Application at National Taichung University of Science and Technology. Since I started the five-year program when I was 15, and got to know more about information literacy, code structure and development process etc., I have two-year experience on web development and I processed experience as an intern in three companies.",
           self_intro4: "In the future, my hope is using the solid programming skills to create a product that become an Indispensable thing in everyone's daily life.",
           chinese_name: "",
-          others: "Others"
+          others: "Others",
+          quick_fact: "Quick Facts",
+          quick_fact1: "I am a regular visitor to Medium, iThome, and often participate in technical conference to gain my information literacy.",
+          quick_fact2: "I love lyric songs and poems / romantic dramas / travel / cats."
         },
       },
       tw: {
@@ -181,7 +184,10 @@ i18n
           self_intro3: "目前我就讀於國立臺中科技大學的資訊應用菁英班。由於我在15歲即進入了敝校的五專體系，開始精進自己的資訊素養、系統架構、開發流程等更專業的知識，因此現在的我已經累積了兩年的網頁開發經驗，並且在這兩年之內已有三間企業的軟體開發實習經歷。",
           self_intro4: "未來的我夢想自己得以利用扎實的程式能力，打造出一套能夠打動人心的產品，成為每個人生活中不可或缺的工具！",
           chinese_name: "許歆荷",
-          others: "其他"
+          others: "其他",
+          quick_fact: "認識我多一點",
+          quick_fact1: "我常常閱讀Medium, iThome的文章，也經常透過參加技術年會來增加資訊素養。",
+          quick_fact2: "喜歡抒情歌與詩集 / 浪漫愛情劇 / 旅行 / 貓。"
         },
       },
     },

@@ -314,6 +314,20 @@ $phones-media:479px;
                 list-style: disc;
             }
         }
+        .quick_fact_img_group {
+            width: fit-content;
+            img {
+                cursor: pointer;
+                margin-left: 10px;
+                margin-bottom: 10px;
+                &.vertical {
+                    width: 100px;
+                }
+                &.horizontal {
+                    height: 100px;
+                }
+            }
+        }
     }
 }
 .bubble_wrapper {
@@ -477,5 +491,22 @@ $phones-media:479px;
 	}
 	to {
         opacity: 1;
+	}
+}
+
+@-webkit-keyframes rotate {
+	from {
+        transform: rotate(0deg);
+	}
+	to {
+        transform: rotate(360deg);
+	}
+}
+@keyframes rotate {
+	from {
+        transform: rotate(0deg);
+	}
+	to {
+        transform: rotate(360deg);
 	}
 }

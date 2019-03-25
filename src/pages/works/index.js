@@ -22,7 +22,11 @@ class Work extends React.Component {
             active1: false,
             active2: false,
             active3: false,
-            active4: false
+            active4: false,
+            ghowaIsInViewport: false,
+            meracleIsInViewport: false,
+            hereIsInViewport: false,
+            bonerpIsInViewport: false,
         }
     }
     onChangeVisibility1 = isActive => {
@@ -37,6 +41,26 @@ class Work extends React.Component {
     onChangeVisibility4 = isActive => {
         this.setState({ active4: isActive });
     };
+    
+    initIsInViewport = (elem) => {
+        if (elem) {
+            var bounding = elem.getBoundingClientRect();
+            return (
+                bounding.top >= 0 &&
+                bounding.left >= 0 &&
+                bounding.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+            )
+        }
+    }
+    componentDidMount() {
+        this.setState({
+            ghowaIsInViewport: this.initIsInViewport(document.getElementsByClassName('timeline-content')[0]),
+            meracleIsInViewport: this.initIsInViewport(document.getElementsByClassName('timeline-content')[1]),
+            hereIsInViewport: this.initIsInViewport(document.getElementsByClassName('timeline-content')[2]),
+            bonerpIsInViewport: this.initIsInViewport(document.getElementsByClassName('timeline-content')[3])
+        })
+    }
     render() {
         const { t } = this.props;
         return (
@@ -92,12 +116,12 @@ class Work extends React.Component {
                             {({ isVisible }) => {
                                 return (
                                     <li className="timeline-milestone">
-                                        <div className={isVisible ? 'timeline-date in_viewport' : 'timeline-date'}>
+                                        <div className={isVisible ? (this.state.meracleIsInViewport ? 'timeline-date in_viewport delay600ms' : 'timeline-date in_viewport') : 'timeline-date'}>
                                             <p>08/2017</p>
                                             <p>- 12/2017</p>
                                         </div>
                                         <Link to={this.props.location.pathname + '/meracle'}>
-                                            <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
+                                            <div className={isVisible ? (this.state.meracleIsInViewport ? 'timeline-content in_viewport delay600ms' : 'timeline-content in_viewport') : 'timeline-content'}>
                                                 <img src={meracle} className="project-img" />
                                                 <div className="project-desc-container">
                                                     <p className="project-title">{t('meracle')}</p>
@@ -127,12 +151,12 @@ class Work extends React.Component {
                             {({ isVisible }) => {
                                 return (
                                     <li className="timeline-milestone">
-                                        <div className={isVisible ? 'timeline-date in_viewport' : 'timeline-date'}>
+                                        <div className={isVisible ? (this.state.hereIsInViewport ? 'timeline-date in_viewport delay1200ms' : 'timeline-date in_viewport') : 'timeline-date'}>
                                             <p>07/2017</p>
                                             <p>- 12/2017</p>
                                         </div>
                                         <Link to={this.props.location.pathname + '/here'}>
-                                            <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
+                                            <div className={isVisible ? (this.state.hereIsInViewport ? 'timeline-content in_viewport delay1200ms' : 'timeline-content in_viewport') : 'timeline-content'}>
                                                 <img src={here} className="project-img" />
                                                 <div className="project-desc-container">
                                                     <p className="project-title">{t('here')}</p>
@@ -161,12 +185,12 @@ class Work extends React.Component {
                             {({ isVisible }) => {
                                 return (
                                     <li className="timeline-milestone">
-                                        <div className={isVisible ? 'timeline-date in_viewport' : 'timeline-date'}>
+                                        <div className={isVisible ? (this.state.bonerpIsInViewport ? 'timeline-date in_viewport delay1800ms' : 'timeline-date in_viewport') : 'timeline-date'}>
                                             <p>01/2017</p>
                                             <p>- 03/2017</p>
                                         </div>
                                         <Link to={this.props.location.pathname + '/bonerp'}>
-                                            <div className={isVisible ? 'timeline-content in_viewport' : 'timeline-content'}>
+                                            <div className={isVisible ? (this.state.bonerpIsInViewport ? 'timeline-content in_viewport delay1800ms' : 'timeline-content in_viewport') : 'timeline-content'}>
                                                 <img src={bonerp} className="project-img" />
                                                 <div className="project-desc-container">
                                                     <p className="project-title">BonERP</p>

@@ -23,16 +23,19 @@ body:has(#work-page) {
             -o-animation: fadein 1s, scaleUp .8s; /* Opera < 12.1 */
             animation: fadein 1s, scaleUp .8s;
             animation-fill-mode: forwards; 
-
+            &.delay600ms {
+                animation-delay: .6s;
+            }
+            &.delay1200ms {
+                animation-delay: 1.2s;
+            }
+            &.delay1800ms {
+                animation-delay: 1.8s;
+            }
         }
         .timeline-milestone {
             list-style: none;
             margin-bottom: 25px;
-            &:nth-child(2) {
-                .in_viewport {
-                    animation-delay: .6s;
-                }
-            }
         }
         .timeline-date {
             font-size: 14px;

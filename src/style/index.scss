@@ -175,6 +175,10 @@ body {
                 animation: fadeIn 2s;
                 animation-delay: .1s;
                 animation-fill-mode: forwards;  
+                transition: all .5s;
+                @media screen and (min-width: 1920px) {
+                    font-size: 24px;
+                }
             }
             .feature-text-line2 {
                 font-weight: 800;
@@ -190,6 +194,10 @@ body {
                 animation: fadeIn 2s;
                 animation-delay: .3s;
                 animation-fill-mode: forwards;  
+                transition: all .5s;
+                @media screen and (min-width: 1920px) {
+                    font-size: 36px;
+                }
             }
             .feature-text-line3 {
                 font-weight: 400;
@@ -205,6 +213,10 @@ body {
                 animation: fadeIn 2s;
                 animation-delay: .6s;
                 animation-fill-mode: forwards;  
+                transition: all .5s;
+                @media screen and (min-width: 1920px) {
+                    font-size: 14px;
+                }
             }
             .feature-text-line4 {
                 font-weight: 400;
@@ -219,6 +231,10 @@ body {
                 animation: fadeIn 2s;
                 animation-delay: .6s;
                 animation-fill-mode: forwards;  
+                transition: all .5s;
+                @media screen and (min-width: 1920px) {
+                    font-size: 14px;
+                }
             }
             hr {
                 border-top: 2px solid #606060;
@@ -262,6 +278,10 @@ body {
                 &:hover {
                     box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.08);
                 }
+                transition: all .5s;
+                @media screen and (min-width: 1920px) {
+                    font-size: 14px;
+                }
             }
         }
         .feature-img-container {
@@ -286,6 +306,10 @@ body {
                     top: unset;
                     height: 60%;
                 }
+                @media screen and (min-width: 1920px) {
+                    height: 85%;
+                    left: 50%;
+                }
             }
             #code-feature-section {
                 margin-top: 170px;
@@ -293,6 +317,10 @@ body {
                 @media screen and (max-width: $pc-media) {
                     position: absolute;
                     top: 55%;
+                }
+                @media screen and (min-width: 1920px) {
+                    margin-top: 250px;
+                    margin-left: 10%;
                 }
             }
         }

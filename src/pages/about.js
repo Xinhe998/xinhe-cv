@@ -67,6 +67,7 @@ const About = ({ t, i18 }) => (
                 <p>{t('others')}</p>
                 <div>
                     <label className="pink">Selenium</label>
+                    <label className="pink">Git</label>
                 </div>
                 <h1>{t('experience')}</h1>
                 <ul className="timeline-container">

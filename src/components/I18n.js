@@ -29,7 +29,7 @@ i18n
           web_back_end: "Web Back-End",
           database: "Database",
           medium_article: "Medium Article",
-          what_i_learn_in_adv: "What I Learn From Advantech IOT Internship",
+          what_i_learn_in_adv: "What I Learned From Advantech IOT Internship",
           nutc: "National Taichung University of Science and Technology",
           student_elite_award: "Student Elite Award",
           first_prize: "First Prize",

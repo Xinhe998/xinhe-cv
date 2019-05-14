@@ -108,6 +108,8 @@ class About extends React.Component {
                         <div>
                             <label className="pink">Selenium</label>
                             <label className="pink">Git</label>
+                            <label className="pink">Jest</label>
+                            <label className="pink">Enzyme</label>
                         </div>
                         <h1>{t('experience')}</h1>
                         <ul className="timeline-container">

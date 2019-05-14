@@ -16,6 +16,10 @@ $phones-media:479px;
         width: 70%;
         height: 200px;
     }
+    @media screen and (max-height: 650px) {
+        width: 60%;
+        height: 52%;
+    }
     .header {
         height: 25px;
         background: white;
@@ -23,7 +27,7 @@ $phones-media:479px;
         position: relative;
         justify-content: flex-start;
         padding-left: 20px;
-        @media screen and (max-width: $pc-media) {
+        @media screen and (max-width: $pc-media), (max-height: 650px) {
             height: 15px;
         }
         .dot {
@@ -32,7 +36,7 @@ $phones-media:479px;
             background-color: #bfbfbf;
             border-radius: 50%;
             margin-right: 10px;
-            @media screen and (max-width: $pc-media) {
+            @media screen and (max-width: $pc-media), (max-height: 650px) {
                 height: 8px;
                 width: 8px;
             }
@@ -51,7 +55,7 @@ $phones-media:479px;
 
             &.block1 {
                 height: 30px;
-                @media screen and (max-width: $pc-media) {
+                @media screen and (max-width: $pc-media), (max-height: 650px) {
                     height: 20px;
                 }   
             }
@@ -60,7 +64,7 @@ $phones-media:479px;
                 width: calc((100% - 40px) / 2);
                 margin-top: 20px;
                 display: inline-block;
-                @media screen and (max-width: $pc-media) {
+                @media screen and (max-width: $pc-media), (max-height: 650px) {
                     height: 40px;
                 }   
             }
@@ -74,7 +78,7 @@ $phones-media:479px;
                 height: 10px;
                 margin-top: 100px;
                 width: 45%;
-                @media screen and (max-width: $pc-media) {
+                @media screen and (max-width: $pc-media), (max-height: 650px) {
                     height: 8px;
                     margin-top: 80px;
                 }   
@@ -83,7 +87,7 @@ $phones-media:479px;
                 height: 10px;
                 margin-top: 10px;
                 width: 80%;
-                @media screen and (max-width: $pc-media) {
+                @media screen and (max-width: $pc-media), (max-height: 650px) {
                     height: 8px;
                 }   
             }
@@ -91,7 +95,7 @@ $phones-media:479px;
                 height: 10px;
                 margin-top: 10px;
                 width: 60%;
-                @media screen and (max-width: $pc-media) {
+                @media screen and (max-width: $pc-media), (max-height: 650px) {
                     height: 8px;
                 }   
             }

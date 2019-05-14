@@ -152,8 +152,8 @@ class Work extends React.Component {
                                 return (
                                     <li className="timeline-milestone">
                                         <div className={isVisible ? (this.state.hereIsInViewport ? 'timeline-date in_viewport delay1200ms' : 'timeline-date in_viewport') : 'timeline-date'}>
-                                            <p>05/2017</p>
-                                            <p>- 03/2017</p>
+                                            <p>03/2017</p>
+                                            <p>- 05/2017</p>
                                         </div>
                                         <Link to={this.props.location.pathname + '/here'}>
                                             <div className={isVisible ? (this.state.hereIsInViewport ? 'timeline-content in_viewport delay1200ms' : 'timeline-content in_viewport') : 'timeline-content'}>

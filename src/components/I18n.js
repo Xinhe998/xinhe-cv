@@ -100,7 +100,12 @@ i18n
           others: "Others",
           quick_fact: "Quick Facts",
           quick_fact1: "I am a regular visitor to Medium, iThome, and often participate in technical conference to gain my information literacy.",
-          quick_fact2: "I love lyric songs and poems / romantic dramas / travel / cats."
+          quick_fact2: "I love lyric songs and poems / romantic dramas / travel / cats.",
+          verizon: "Verizon Media",
+          verizon_overview: "As a Front-End Engineer intern, I was responsible for participating ‘<1>{{yahoo_youcard}}Yahoo Youcard</1>’ project growth.",
+          verizon_dutie1: "Built a Progressive Web Application (PWA), implemented cache strategy and enabled offline reading, that contributed to 35% faster in speed of page loading.",
+          verizon_dutie2: "Improved SEO by adding the structured data, resulted in double website traffic.",
+          verizon_dutie3: "Optimized performance by lazy load, reducing bundle sizes and generating animations using pure CSS."
         },
       },
       tw: {
@@ -187,7 +192,12 @@ i18n
           others: "其他",
           quick_fact: "認識我多一點",
           quick_fact1: "我常常閱讀Medium, iThome的文章，也經常透過參加技術年會來增加資訊素養。",
-          quick_fact2: "喜歡抒情歌與詩集 / 浪漫愛情劇 / 旅行 / 貓。"
+          quick_fact2: "喜歡抒情歌與詩集 / 浪漫愛情劇 / 旅行 / 貓。",
+          verizon: "Verizon Media",
+          verizon_overview: "擔任前端實習生的兩個月中，我負責的是參與並協助 「<1>{{yahoo_youcard}}Yahoo 懶人卡</1>」 專案的成長。",
+          verizon_dutie1: "建構 PWA、導入 cache 與離線瀏覽機制，使網頁載入速度成長 35%。",
+          verizon_dutie2: "加入結構化資料 (Structured Data) 以增進 SEO，促使懶人卡網站流量成長近兩倍。",
+          verizon_dutie3: "透過實作 lazy load、減少專案 bundle sizes 並採用純 CSS 製作複雜的動畫特效等達成網頁效能調校。"
         },
       },
     },

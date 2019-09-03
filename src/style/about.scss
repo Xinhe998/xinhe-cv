@@ -227,6 +227,15 @@ $phones-media:479px;
                 font-weight: normal;
                 width: 60%;
                 justify-content: flex-end;
+                p {
+                    line-height: 2;
+                    letter-spacing: 1.5px;
+                    color: #919191;
+                    font-weight: 500;
+                    a {
+                        font-weight: 500;
+                    }
+                }
                 @media screen and (max-width: $pc-media) {
                     border-left: none;
                 }

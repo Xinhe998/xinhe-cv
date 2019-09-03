@@ -9,7 +9,7 @@ body:has(#work-page) {
 }
 #work-page {
     padding: 40px 36px;
-    overflow: auto;
+    // overflow: auto;
     .timeline-blocks-container {
         position: relative;
         border-left: 2.5px solid #dedede;

@@ -7,10 +7,11 @@ import linkdinImg from '../Assets/linkdin.png'
 import mediumImg from '../Assets/medium.png'
 import '../style/index.scss'
 import MobileSidebar from './MobileSidebar'
+import structuredData from '../configs/structuredData'
 
 const HomeLayout = ({ children }) => (
     <div id="home-page">
-    <MobileSidebar />
+        <MobileSidebar />
         <div className="header">
             <div className="menu">
                 <Link to="works">Work</Link>
@@ -34,6 +35,12 @@ const HomeLayout = ({ children }) => (
                 </a>
             </div>
         </div>
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+                __html: `${JSON.stringify(structuredData.basic)}`
+            }}
+        />
     </div>
 )
 HomeLayout.propTypes = {

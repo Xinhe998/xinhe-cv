@@ -30,6 +30,10 @@ class About extends React.Component {
     }
   }
   openLightbox = img_index => {
+    window.gtag("event", "Photo", {
+      event_category: "view photo",
+      event_label: img_index,
+    })
     this.setState({
       lightboxIsOpen: true,
       lightbox_current_img: img_index,
@@ -181,6 +185,12 @@ class About extends React.Component {
                     <a
                       href="https://medium.com/@xinhe998/advantech-internship-f4ba6a13acf6"
                       target="_blank"
+                      onClick={() => {
+                        window.gtag("event", "Advantech Medium Article", {
+                          event_category: "photo click",
+                          event_label: "Medium",
+                        })
+                      }}
                     >
                       <img src={advantch_pic} />
                     </a>

@@ -18,13 +18,13 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
-    "gatsby-plugin-offline",
+    // "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/locales`,
-        name: `locales`,
+        path: `${__dirname}/src/Assets`,
+        name: "images",
       },
     },
     {
@@ -53,10 +53,20 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-adsense`,
+      resolve: "gatsby-plugin-html-minifier",
       options: {
-        publisherId: `ca-pub-4006713786170273`,
+        caseSensitive: false,
+        collapseBooleanAttributes: false,
+        useShortDoctype: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-minify-classnames`,
+      options: {
+        develop: true, // Enable on `gatsby develop`
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ],
 }

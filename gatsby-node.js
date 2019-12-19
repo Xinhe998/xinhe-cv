@@ -8,3 +8,11 @@ exports.onPostBuild = () => {
     path.join(__dirname, "/public/locales")
   )
 }
+
+exports.onCreateWebpackConfig = ({ actions, stage }) => {
+  if (stage === 'build-javascript') {
+    actions.setWebpackConfig({
+      devtool: false
+    })
+  }
+};

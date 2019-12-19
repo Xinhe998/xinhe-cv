@@ -48,6 +48,28 @@ const workBreadcrumbList = {
   }]
 };
 
+const codioBreadcrumbList = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Xinhe Hsu",
+    "item": url
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Work",
+    "item": `${url}/works`
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Codio",
+    "item": `${url}/works/codio`,
+    "description": "Online Collaborative IDE for Web Development",
+  }]
+};
+
 const ghowaBreadcrumbList = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -149,12 +171,13 @@ const aboutPersonData = {
 
 const structuredData = {
   basic: basicData,
-  about: [...basicData, ...aboutBreadcrumbList, ...aboutPersonData],
-  works: [...basicData, ...workBreadcrumbList],
-  ghowa: [...basicData, ...ghowaBreadcrumbList],
-  meracle: [...basicData, ...meracleBreadcrumbList],
-  here: [...basicData, ...hereBreadcrumbList],
-  bonerp: [...basicData, ...bonerpBreadcrumbList]
+  about: [basicData, aboutBreadcrumbList, aboutPersonData],
+  works: [basicData, workBreadcrumbList],
+  ghowa: [basicData, ghowaBreadcrumbList],
+  meracle: [basicData, meracleBreadcrumbList],
+  here: [basicData, hereBreadcrumbList],
+  bonerp: [basicData, bonerpBreadcrumbList],
+  codio: [basicData, codioBreadcrumbList]
 };
 
 export default structuredData

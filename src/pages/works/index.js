@@ -2,17 +2,13 @@ import React from "react"
 import Layout from "../../components/Layout"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
-
 import { withI18next } from "gatsby-plugin-i18next"
 import { withNamespaces } from "react-i18next"
-
-import "../../style/work.scss"
-import meracle from "../../Assets/meracle.png"
-import ghowa from "../../Assets/ghowa_feature_img.png"
-import here from "../../Assets/here.png"
-import bonerp from "../../Assets/bonerp.png"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import structuredData from "../../configs/structuredData"
+import "../../style/work.scss"
 
 const VisibilitySensor = require("react-visibility-sensor").default
 
@@ -24,6 +20,7 @@ class Work extends React.Component {
       active2: false,
       active3: false,
       active4: false,
+      active5: false,
       ghowaIsInViewport: false,
       meracleIsInViewport: false,
       hereIsInViewport: false,
@@ -42,6 +39,9 @@ class Work extends React.Component {
   onChangeVisibility4 = isActive => {
     this.setState({ active4: isActive })
   }
+  onChangeVisibility5 = isActive => {
+    this.setState({ active5: isActive })
+  }
 
   initIsInViewport = elem => {
     if (elem) {
@@ -58,22 +58,26 @@ class Work extends React.Component {
   }
   componentDidMount() {
     this.setState({
-      ghowaIsInViewport: this.initIsInViewport(
+      codioIsInViewport: this.initIsInViewport(
         document.getElementsByClassName("timeline-content")[0]
       ),
-      meracleIsInViewport: this.initIsInViewport(
+      ghowaIsInViewport: this.initIsInViewport(
         document.getElementsByClassName("timeline-content")[1]
       ),
-      hereIsInViewport: this.initIsInViewport(
+      meracleIsInViewport: this.initIsInViewport(
         document.getElementsByClassName("timeline-content")[2]
       ),
-      bonerpIsInViewport: this.initIsInViewport(
+      hereIsInViewport: this.initIsInViewport(
         document.getElementsByClassName("timeline-content")[3]
+      ),
+      bonerpIsInViewport: this.initIsInViewport(
+        document.getElementsByClassName("timeline-content")[4]
       ),
     })
   }
   render() {
-    const { t } = this.props
+    const { t, data } = this.props
+    console.log(data)
     return (
       <Layout>
         <Helmet>
@@ -98,6 +102,74 @@ class Work extends React.Component {
             <VisibilitySensor
               offset={{ top: -200 }}
               partialVisibility={true}
+              onChange={this.onChangeVisibility5}
+              active={!this.state.active5}
+            >
+              {({ isVisible }) => {
+                return (
+                  <li className="timeline-milestone">
+                    <div
+                      className={
+                        isVisible
+                          ? "timeline-date in_viewport"
+                          : "timeline-date"
+                      }
+                    >
+                      <p>06/2019</p>
+                      <p>- {t("present")}</p>
+                    </div>
+                    <Link to={this.props.location.pathname + "/codio"}>
+                      <div
+                        className={
+                          isVisible
+                            ? "timeline-content in_viewport"
+                            : "timeline-content"
+                        }
+                      >
+                        <Img
+                          fluid={data.codio.childImageSharp.fluid}
+                          className="project-img"
+                        />
+                        <div className="project-desc-container">
+                          <p className="project-title">Codio</p>
+                          <p className="project-desc">{t("codio_desc")}</p>
+                          <div className="project-detail">
+                            <div>
+                              <p className="project-role-title">
+                                {t("role")}：
+                              </p>
+                              <label className="role">
+                                {t("web_front_end_dev")}
+                              </label>
+                            </div>
+                            <div>
+                              <p className="project-program-title">
+                                {t("program_lang")}：
+                              </p>
+                              <label className="programming_language">
+                                React.js
+                              </label>
+                              <label className="programming_language">
+                                Redux
+                              </label>
+                              <label className="programming_language">
+                                Redux-Thunk
+                              </label>
+                              <label className="programming_language">
+                                SCSS
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                )
+              }}
+            </VisibilitySensor>
+            <VisibilitySensor
+              offset={{ top: -200 }}
+              partialVisibility={true}
               onChange={this.onChangeVisibility4}
               active={!this.state.active4}
             >
@@ -112,7 +184,7 @@ class Work extends React.Component {
                       }
                     >
                       <p>11/2018</p>
-                      <p>- {t("present")}</p>
+                      <p>- 05/2019</p>
                     </div>
                     <Link to={this.props.location.pathname + "/ghowa"}>
                       <div
@@ -122,7 +194,10 @@ class Work extends React.Component {
                             : "timeline-content"
                         }
                       >
-                        <img src={ghowa} className="project-img" />
+                        <Img
+                          fluid={data.ghowa.childImageSharp.fluid}
+                          className="project-img"
+                        />
                         <div className="project-desc-container">
                           <p className="project-title">Ghowa</p>
                           <p className="project-desc">{t("ghowa_desc")}</p>
@@ -188,7 +263,11 @@ class Work extends React.Component {
                             : "timeline-content"
                         }
                       >
-                        <img src={meracle} className="project-img" />
+                        {/* <img src={meracle} className="project-img" /> */}
+                        <Img
+                          fluid={data.meracle.childImageSharp.fluid}
+                          className="project-img"
+                        />
                         <div className="project-desc-container">
                           <p className="project-title">{t("meracle")}</p>
                           <p className="project-desc">{t("meracle_desc")}</p>
@@ -216,9 +295,6 @@ class Work extends React.Component {
                               </label>
                               <label className="programming_language">
                                 JavaScript
-                              </label>
-                              <label className="programming_language">
-                                Webpack
                               </label>
                             </div>
                           </div>
@@ -260,7 +336,10 @@ class Work extends React.Component {
                             : "timeline-content"
                         }
                       >
-                        <img src={here} className="project-img" />
+                        <Img
+                          fluid={data.here.childImageSharp.fluid}
+                          className="project-img"
+                        />
                         <div className="project-desc-container">
                           <p className="project-title">{t("here")}</p>
                           <p className="project-desc">{t("here_desc")}</p>
@@ -329,7 +408,10 @@ class Work extends React.Component {
                             : "timeline-content"
                         }
                       >
-                        <img src={bonerp} className="project-img" />
+                        <Img
+                          fluid={data.bonerp.childImageSharp.fluid}
+                          className="project-img"
+                        />
                         <div className="project-desc-container">
                           <p className="project-title">BonERP</p>
                           <p className="project-desc">{t("bonerp_desc")}</p>
@@ -342,7 +424,7 @@ class Work extends React.Component {
                                 {t("web_front_end_dev")}
                               </label>
                               <label className="role">
-                                {t("web_back_end_dev")}
+                                {t("back_end_dev")}
                               </label>
                             </div>
                             <div>
@@ -395,3 +477,42 @@ class Work extends React.Component {
 }
 
 export default withI18next()(withNamespaces("translation")(Work))
+export const query = graphql`
+  query {
+    codio: file(relativePath: { eq: "codio.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ghowa: file(relativePath: { eq: "ghowa.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    meracle: file(relativePath: { eq: "meracle.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    here: file(relativePath: { eq: "here.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bonerp: file(relativePath: { eq: "bonerp.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

@@ -5,15 +5,16 @@ import Lightbox from "react-images"
 import { withI18next } from "gatsby-plugin-i18next"
 import { withNamespaces, Trans } from "react-i18next"
 import { Helmet } from "react-helmet"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
-import "../../style/work.scss"
-import "../../style/work_detail.scss"
-import ghowa from "../../Assets/ghowa_feature_img.png"
 import ghowa_app_1 from "../../Assets/ghowa-app-1.png"
 import ghowa_app_2 from "../../Assets/ghowa-app-2.png"
 import ghowa_wireframe from "../../Assets/ghowa-wireframe.png"
 
 import structuredData from "../../configs/structuredData"
+import "../../style/work.scss"
+import "../../style/work_detail.scss"
 
 class Ghowa extends React.Component {
   constructor(props) {
@@ -72,7 +73,7 @@ class Ghowa extends React.Component {
     })
   }
   render() {
-    const { t } = this.props
+    const { t, data } = this.props
     return (
       <Layout>
         <Helmet>
@@ -91,7 +92,10 @@ class Ghowa extends React.Component {
           id="work-detail-container"
           onScroll={this.listenScrollEvent.bind(this)}
         >
-          <img src={ghowa} className="project-img" />
+          <Img
+            fluid={data.ghowa.childImageSharp.fluid}
+            className="project-img"
+          />
           <div className="project-desc-container">
             <div id="be-header-when-scroll">
               <Link to="/works">
@@ -131,11 +135,6 @@ class Ghowa extends React.Component {
               </Trans>
               <br />
               {t("ghowa_brief2")}
-              <br />
-              <Trans i18nKey="ghowa_brief3">
-                This project is still ongoing and{" "}
-                <b>planned to be launched on App Store</b> in summer 2019.
-              </Trans>
             </p>
             <h1>{t("at_a_glance")}</h1>
             <p>{t("ghowa_at_a_glance")}</p>
@@ -179,8 +178,8 @@ class Ghowa extends React.Component {
             <p>{t("sent_me_email_in_project_page")}</p>
             <a href="mailto:xinhe998@gmail.com">xinhe998@gmail.com</a>
           </div>
-          <div className="navigate-project-btn-container only-display-next">
-            <Link> ← {t("prev_project")}</Link>
+          <div className="navigate-project-btn-container">
+            <Link to="works/codio"> ← {t("prev_project")}</Link>
             <Link to="works/meracle">{t("next_project")} → </Link>
           </div>
         </div>
@@ -197,3 +196,14 @@ class Ghowa extends React.Component {
 }
 
 export default withI18next()(withNamespaces("translation")(Ghowa))
+export const query = graphql`
+  query {
+    ghowa: file(relativePath: { eq: "ghowa.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

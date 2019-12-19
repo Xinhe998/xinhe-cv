@@ -16,6 +16,7 @@ $phones-media:479px;
         color: #919191;
         margin-top: 30px;
         opacity: 0;
+        will-change: opacity;
         -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
         -moz-animation: fadein .5s; /* Firefox < 16 */
         -ms-animation: fadein .5s; /* Internet Explorer */
@@ -73,6 +74,7 @@ $phones-media:479px;
         }
     }
     .main-content {
+        will-change: transform;
         border-radius: 20px;
         -webkit-backdrop-filter: blur(30px);
         backdrop-filter: blur(30px);
@@ -127,25 +129,23 @@ $phones-media:479px;
             font-size: 12px;
             color: #6f6f6f;
             border-radius: 50px;
-            -webkit-backdrop-filter: blur(9px);
-            backdrop-filter: blur(9px);
             background-color: rgba(217, 223, 242, 0.75);
             padding: 9px 18px;
             display: inline-block;
             margin: 0 6px;
             margin-bottom: 10px;
+            will-change: auto;
         }
         label.pink {
             font-size: 12px;
             border-radius: 50px;
-            -webkit-backdrop-filter: blur(9px);
-            backdrop-filter: blur(9px);
             background-color: rgba(230, 207, 207, 0.75);
             padding: 7px 15px;
             display: inline-block;
             margin: 0 6px;
             color: #6f6f6f;
             margin-bottom: 10px;
+            will-change: auto;
         }
         .timeline-container {
             position: relative;
@@ -225,7 +225,7 @@ $phones-media:479px;
                 letter-spacing: 1.5px;
                 text-align: left;
                 font-weight: normal;
-                width: 60%;
+                width: 65%;
                 justify-content: flex-end;
                 p {
                     line-height: 2;
@@ -287,11 +287,11 @@ $phones-media:479px;
                     opacity: 0.8;
                     width:100%;
                     margin:-10px -10px -10px -10px;
-                    
                 }
                 .img-zoom-in img 
                 {
-                    transition:all .2s ease-in-out;
+                    will-change: transform;
+                    transition:all .2s ease-in-out !important;
                     -webkit-transition:all .2s ease-in-out;
                     -moz-transition:all .2s ease-in-out;
                     -ms-transition:all .2s ease-in-out;
@@ -305,7 +305,7 @@ $phones-media:479px;
                     -moz-transform:scale(1.1);
                     -ms-transform:scale(1.1);
                     -o-transform:scale(1.1);
-                    opacity: 1;
+                    opacity: 1 !important;
                 }
                 
             }
@@ -465,7 +465,7 @@ $phones-media:479px;
 	from {
         position: absolute;
         transition: top 500ms cubic-bezier(0.47, 0, 0.75, 0.72) .5s;
-        top: 100%
+        top: 100%;
 	}
 	to {
         position: absolute;

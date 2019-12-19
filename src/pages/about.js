@@ -2,15 +2,12 @@ import React from "react"
 import Layout from "../components/Layout"
 import Lightbox from "react-images"
 import { Helmet } from "react-helmet"
-
-import "../style/about.scss"
-import avatar from "../Assets/avatar.jpg"
-import advantch_pic from "../Assets/advantech_pic.jpg"
-import yahoo_pic from "../Assets/yahoo_pic.jpg"
 import { withI18next } from "gatsby-plugin-i18next"
 import { withNamespaces } from "react-i18next"
 import { Trans } from "react-i18next"
 import i18next from "i18next"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import quick_fact1 from "../Assets/quick_fact1.jpg"
 import quick_fact2 from "../Assets/quick_fact2.jpg"
@@ -20,6 +17,7 @@ import quick_fact5 from "../Assets/quick_fact5.jpg"
 import quick_fact6 from "../Assets/quick_fact6.jpg"
 
 import structuredData from "../configs/structuredData"
+import "../style/about.scss"
 
 class About extends React.Component {
   constructor(props) {
@@ -55,7 +53,7 @@ class About extends React.Component {
     })
   }
   render() {
-    const { t } = this.props
+    const { t, data } = this.props
     return (
       <Layout>
         <Helmet>
@@ -73,7 +71,11 @@ class About extends React.Component {
         <div id="about-page">
           <div className="intro">
             <div className="avatar-box">
-              <img className="avatar" src={avatar} />
+              {/* <img className="avatar" src={avatar} /> */}
+              <Img
+                fluid={data.avatar.childImageSharp.fluid}
+                className="avatar"
+              />
             </div>
             <div className="circle" />
             <p className="name">
@@ -92,41 +94,41 @@ class About extends React.Component {
               <br />
               {t("self_intro4")}
             </p>
-            <h1>{t("skill")}</h1>
-            <p>{t("web_front_end")}</p>
+            <h1>{t("specialties")}</h1>
+            <p>JavaScript</p>
             <div>
-              <label className="pink">JavaScript</label>
-              <label className="pink">React.js</label>
+              <label className="pink">Vanilla js</label>
+              <label className="pink">React</label>
               <label className="pink">Redux</label>
               <label className="pink">jQuery</label>
-              <label className="pink">Vue.js</label>
-              <label className="pink">Webpack</label>
-              <label className="pink">HTML</label>
-              <label className="pink">CSS / SCSS</label>
-              <label className="pink">Bootstrap</label>
+            </div>
+            <p>CSS</p>
+            <div>
+              <label className="blue">SCSS</label>
+              <label className="blue">Atomic CSS</label>
             </div>
             <p>{t("web_back_end")}</p>
             <div>
-              <label className="blue">Node.js</label>
-              <label className="blue">Express.js</label>
-              <label className="blue">Socket.io</label>
-              <label className="blue">ASP.NET MVC 5</label>
+              <label className="pink">Node.js</label>
+              <label className="pink">Express.js</label>
+              <label className="pink">Socket.IO</label>
+              <label className="pink">ASP.NET MVC</label>
             </div>
             <p>{t("database")}</p>
             <div>
-              <label className="pink">MS SQL Server</label>
-              <label className="pink">MySQL</label>
+              <label className="blue">Microsoft SQL Server</label>
+              <label className="blue">MySQL</label>
             </div>
-            <p>{t("server")}</p>
+            <p>{t("build_tool")}</p>
             <div>
-              <label className="blue">IIS</label>
+              <label className="pink">Webpack</label>
+              <label className="pink">Babel</label>
             </div>
-            <p>{t("others")}</p>
+            <p>{t("testing")}</p>
             <div>
-              <label className="pink">Selenium</label>
-              <label className="pink">Git</label>
-              <label className="pink">Jest</label>
-              <label className="pink">Enzyme</label>
+              <label className="blue">Selenium</label>
+              <label className="blue">Jest</label>
+              <label className="blue">Enzyme</label>
             </div>
             <h1>{t("experience")}</h1>
             <ul className="timeline-container">
@@ -153,7 +155,11 @@ class About extends React.Component {
                     <li>{t("verizon_dutie3")} </li>
                   </ul>
                   <div className="image-hover img-zoom-in">
-                    <img src={yahoo_pic} />
+                    <Img
+                      fluid={data.yahoo_pic.childImageSharp.fluid}
+                      style={{ width: "200px", height: "150px" }}
+                      imgStyle={{ opacity: "0.8" }}
+                    />
                   </div>
                 </div>
               </li>
@@ -192,13 +198,17 @@ class About extends React.Component {
                         })
                       }}
                     >
-                      <img src={advantch_pic} />
+                      <Img
+                        fluid={data.advantech_pic.childImageSharp.fluid}
+                        style={{ width: "200px", height: "150px" }}
+                        imgStyle={{ opacity: "0.8" }}
+                      />
                     </a>
                   </div>
                   <div className="bubble_wrapper">
                     <div
                       className={
-                        i18next.language == "tw"
+                        i18next.language === "tw"
                           ? "bubble for_tw"
                           : "bubble for_en"
                       }
@@ -262,6 +272,14 @@ class About extends React.Component {
             <h1>{t("awards")}</h1>
             <ul className="awards-list">
               <li>
+                <b>{t("third_prize")},</b>{" "}
+                {t("project_information_distribution_science")}, 2019
+              </li>
+              <li>
+                <b>{t("first_prize")},</b> {t("innoserve")}:{" "}
+                {t("titansoft_agile")}, 2019
+              </li>
+              <li>
                 <b>{t("student_elite_award")},</b> {t("nutc")}, 2018
               </li>
               <li>
@@ -313,21 +331,32 @@ class About extends React.Component {
                 enableKeyboardInput={true}
                 showImageCount={false}
               />
-              <img
-                src={quick_fact3}
-                className="vertical"
-                onClick={() => this.openLightbox(0)}
-              />
-              <img
-                src={quick_fact4}
-                className="vertical"
-                onClick={() => this.openLightbox(1)}
-              />
-              <img
-                src={quick_fact5}
-                className="vertical"
-                onClick={() => this.openLightbox(2)}
-              />
+              <div style={{ display: "flex" }}>
+                <div onClick={() => this.openLightbox(0)}>
+                  <Img
+                    fluid={data.quick_fact3.childImageSharp.fluid}
+                    className="vertical"
+                    style={{ width: "100px" }}
+                    imgStyle={{ width: "100px", height: "auto" }}
+                  />
+                </div>
+                <div onClick={() => this.openLightbox(1)}>
+                  <Img
+                    fluid={data.quick_fact4.childImageSharp.fluid}
+                    className="vertical"
+                    style={{ width: "100px" }}
+                    imgStyle={{ width: "100px", height: "auto" }}
+                  />
+                </div>
+                <div onClick={() => this.openLightbox(2)}>
+                  <Img
+                    fluid={data.quick_fact5.childImageSharp.fluid}
+                    className="vertical"
+                    style={{ width: "100px" }}
+                    imgStyle={{ width: "100px", height: "auto" }}
+                  />
+                </div>
+              </div>
               <br />
               <img
                 src={quick_fact1}
@@ -366,4 +395,70 @@ class About extends React.Component {
 }
 
 export default withI18next()(withNamespaces("translation")(About))
-// export default translate("Layout")(About)
+export const query = graphql`
+  query {
+    avatar: file(relativePath: { eq: "avatar.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    advantech_pic: file(relativePath: { eq: "advantech_pic.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    yahoo_pic: file(relativePath: { eq: "yahoo_pic.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    quick_fact1: file(relativePath: { eq: "quick_fact1.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    quick_fact2: file(relativePath: { eq: "quick_fact2.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    quick_fact3: file(relativePath: { eq: "quick_fact3.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    quick_fact4: file(relativePath: { eq: "quick_fact4.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    quick_fact5: file(relativePath: { eq: "quick_fact5.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    quick_fact6: file(relativePath: { eq: "quick_fact6.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

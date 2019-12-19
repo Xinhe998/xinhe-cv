@@ -3,14 +3,14 @@ import Layout from "../../components/Layout"
 import { Link } from "gatsby"
 import Lightbox from "react-images"
 import { Helmet } from "react-helmet"
-
 import { withI18next } from "gatsby-plugin-i18next"
 import { withNamespaces, Trans } from "react-i18next"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import "../../style/work.scss"
 import "../../style/work_detail.scss"
 
-import here from "../../Assets/here.png"
 import here_1 from "../../Assets/here-1.png"
 import here_2 from "../../Assets/here-2.jpg"
 import here_3 from "../../Assets/here-3.jpg"
@@ -75,7 +75,7 @@ class Here extends React.Component {
     })
   }
   render() {
-    const { t, i18n } = this.props
+    const { t, i18n, data } = this.props
     return (
       <Layout>
         <Helmet>
@@ -94,7 +94,10 @@ class Here extends React.Component {
           id="work-detail-container"
           onScroll={this.listenScrollEvent.bind(this)}
         >
-          <img src={here} className="project-img" />
+          <Img
+            fluid={data.here.childImageSharp.fluid}
+            className="project-img"
+          />
           <div className="project-desc-container">
             <div id="be-header-when-scroll">
               <Link to="/works">
@@ -125,16 +128,18 @@ class Here extends React.Component {
             <h1>{t("project_brief")}</h1>
             <p>
               <Trans i18nKey="here_brief1">
-                HERE is{" "}
-                <b>
-                  a website platform based around the concept of bartering.{" "}
-                </b>
+                HERE is
+                <strong>
+                  a website platform based around the concept of bartering.
+                </strong>
                 The inspiration comes from the story that started with the
-                trading of a paper clip and ended with a house. HERE aims to{" "}
-                <b>H</b>elp <b>E</b>veryone, <b>R</b>euse <b>E</b>verything. It
-                allows donors that have different demands include releasing
-                ending inventory in an enterprise, contributing unwanted item in
-                home etc.
+                trading of a paper clip and ended with a house. <br />
+                HERE aims to
+                <strong>H</strong>elp <strong>E</strong>veryone,{" "}
+                <strong>R</strong>euse <strong>E</strong>verything. It allows
+                donors that have different demands include releasing ending
+                inventory in an enterprise, contributing unwanted item in home
+                etc.
               </Trans>
               <br />
               {t("here_brief2")}
@@ -213,3 +218,14 @@ class Here extends React.Component {
 }
 
 export default withI18next()(withNamespaces("translation")(Here))
+export const query = graphql`
+  query {
+    here: file(relativePath: { eq: "here.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

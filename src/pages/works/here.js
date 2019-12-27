@@ -135,7 +135,7 @@ class Here extends React.Component {
                 The inspiration comes from the story that started with the
                 trading of a paper clip and ended with a house. <br />
                 HERE aims to
-                <strong>H</strong>elp <strong>E</strong>veryone,{" "}
+                <strong>H</strong>elp <strong>E</strong>veryone,
                 <strong>R</strong>euse <strong>E</strong>verything. It allows
                 donors that have different demands include releasing ending
                 inventory in an enterprise, contributing unwanted item in home

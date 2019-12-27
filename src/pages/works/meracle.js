@@ -151,9 +151,9 @@ class Meracle extends React.Component {
             <h1>{t("project_brief")}</h1>
             <p>
               <Trans i18nKey="meracle_brief1">
-                Meracle is{" "}
+                Meracle is
                 <b>
-                  a platform that trains and tracks memory for young-learners.{" "}
+                  a platform that trains and tracks memory for young-learners.
                 </b>
                 It captures brain wave by Neurosky MindWave Mobile Headset,
                 quantizes the working memory with algorithm, and provides
@@ -233,11 +233,11 @@ class Meracle extends React.Component {
                 {t("project_information_distribution_science")}, 2017
               </li>
               <li>
-                <b>{t("third_prize")},</b> {t("innoserve")}:{" "}
+                <b>{t("third_prize")},</b> {t("innoserve")}:
                 {t("titansoft_agile")}, 2017
               </li>
               <li>
-                <b>{t("honorable_mention")},</b> {t("innoserve")}:{" "}
+                <b>{t("honorable_mention")},</b> {t("innoserve")}:
                 {t("campus_4g")}, 2017
               </li>
               <li>

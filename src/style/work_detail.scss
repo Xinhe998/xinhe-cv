@@ -76,7 +76,8 @@ $phones-media: 479px;
   animation: contentScaleUp 0.5s;
   animation-fill-mode: forwards;
   @media screen and (max-width: $pc-media) {
-    margin: 80px 28px 0px;
+    padding: 38px 20px 38px;
+    margin: 80px 5px 0px;
   }
 
   .close-btn {
@@ -94,6 +95,10 @@ $phones-media: 479px;
     }
     @media screen and (max-width: $pc-media) {
       top: 45px;
+    }
+    @media screen and (max-width: $phone-media) {
+      top: 20px;
+      right: 25px;
     }
 
     &:before,

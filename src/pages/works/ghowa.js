@@ -125,10 +125,10 @@ class Ghowa extends React.Component {
             <h1>{t("project_brief")}</h1>
             <p>
               <Trans i18nKey="ghowa_brief1">
-                Ghowa is an{" "}
+                Ghowa is an
                 <b>
                   app that calculates a balance of a group of people who spend
-                  money and want to calculate a balance for each participant.{" "}
+                  money and want to calculate a balance for each participant.
                 </b>
                 It allows user to create infinite groups for managing a list
                 with the shared expenses.

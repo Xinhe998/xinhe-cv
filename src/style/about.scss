@@ -91,16 +91,15 @@ $phones-media:479px;
         animation-fill-mode: forwards;  
         position: absolute;
         top: 100%;
-        @media screen and (max-width: $pc-media) {
+        box-sizing: border-box;
+        --expect-top: 300px;
+        @media screen and (min-width: $phone-media) and (max-width: $pc-media) {
             margin: 5px 3px 40px;
         }
         @media screen and (max-width: $phone-media) {
-            -webkit-animation: SlideToTopInMobile .5s; /* Safari, Chrome and Opera > 12.1 */
-            -moz-animation: SlideToTopInMobile .5s; /* Firefox < 16 */
-            -ms-animation: SlideToTopInMobile .5s; /* Internet Explorer */
-            -o-animation: SlideToTopInMobile .5s; /* Opera < 12.1 */
-            animation: SlideToTopInMobile .5s;
-            animation-fill-mode: forwards;  
+            width: 100%;
+            margin: 5px 3px 40px;
+            padding: 38px 20px 38px;
         }
         
         h1 {
@@ -470,19 +469,7 @@ $phones-media:479px;
 	to {
         position: absolute;
         transition: top 500ms cubic-bezier(0.47, 0, 0.75, 0.72) .5s;
-        top: 40%;
-	}
-}
-@keyframes SlideToTopInMobile {
-	from {
-        position: absolute;
-        transition: top 500ms cubic-bezier(0.47, 0, 0.75, 0.72) .5s;
-        top: 100%
-	}
-	to {
-        position: absolute;
-        transition: top 500ms cubic-bezier(0.47, 0, 0.75, 0.72) .5s;
-        top: 45%;
+        top: var(--expect-top);
 	}
 }
 

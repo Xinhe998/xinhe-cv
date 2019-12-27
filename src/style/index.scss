@@ -136,6 +136,7 @@ body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   #home-page {
+    touch-action: none;
     opacity: 0;
     -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 0.5s; /* Firefox < 16 */

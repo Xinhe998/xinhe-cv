@@ -135,10 +135,10 @@ class BonErp extends React.Component {
             <h1>{t("project_brief")}</h1>
             <p>
               <Trans i18nKey="taiwan_cloud_brief1">
-                In winter 2017, I interned at{" "}
+                In winter 2017, I interned at
                 <a href="https://taiwancloud.com/" target="_blank">
                   Taiwan Cloud Corporation
-                </a>{" "}
+                </a>
                 with four of my classmates. we helped the development and
                 implement of the ERP system, BonERP.
               </Trans>

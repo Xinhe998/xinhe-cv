@@ -183,7 +183,7 @@ class Ghowa extends React.Component {
             <Link to="works/meracle">{t("next_project")} → </Link>
           </div>
         </div>
-        <p className="copyright">© Xinhe Hsu 2019.</p>
+        <p className="copyright">© Xinhe Hsu 2020.</p>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

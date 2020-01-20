@@ -464,7 +464,7 @@ class Work extends React.Component {
             <a href="mailto:xinhe998@gmail.com">xinhe998@gmail.com</a>
           </div>
         </div>
-        <p className="copyright">© Xinhe Hsu 2019.</p>
+        <p className="copyright">© Xinhe Hsu 2020.</p>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

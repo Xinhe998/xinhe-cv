@@ -73,7 +73,7 @@ class Sidebar extends React.Component {
             ABOUT
           </Link>
           <a
-            href="https://drive.google.com/open?id=1_M0A04iMMiug4HHgeqgKadRy5zHRZetv"
+            href="https://xinhehsu.com/xinhe-resume.pdf"
             target="_blank"
             onClick={() => {
               window.gtag("event", "Resume", {

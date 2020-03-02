@@ -61,7 +61,7 @@ class MobileSidebar extends React.Component {
       (window.location.pathname.includes("works") ||
         window.location.pathname.includes("about"))
     return (
-      <div id="mobile_sidebar">
+      <div id="mobile_sidebar" className={`${this.state.menuIsOpen ? 'open': '' }`}>
         <input
           type="checkbox"
           id="menuToggler"
@@ -91,7 +91,7 @@ class MobileSidebar extends React.Component {
             <Link to="works">WORK</Link>
             <Link to="about">ABOUT</Link>
             <a
-              href="https://drive.google.com/open?id=1_M0A04iMMiug4HHgeqgKadRy5zHRZetv"
+              href="https://xinhehsu.com/xinhe-resume.pdf"
               target="_blank"
             >
               RESUME

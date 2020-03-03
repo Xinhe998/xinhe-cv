@@ -5,6 +5,15 @@ $pads-media:759px;
 $phone-media:480px;
 $phones-media:479px;
 $segment-label-width: 80px;
+
+#mobile_sidebar {
+    touch-action: unset;
+    overflow-y: scroll;
+    &.open{
+        touch-action: none;
+        overflow-y: hidden;
+    }
+}
 .mobile_sidebar_content {
     position: absolute;
     z-index: 100;
@@ -144,6 +153,9 @@ $segment-label-width: 80px;
     &:checked ~ .mobile_sidebar_content.closing {
         animation: fadeout .5s;
     }
+}
+.mobile_sidebar_open {
+    overflow-y: hidden;
 }
 @-webkit-keyframes fadein {
 	from {

@@ -77,7 +77,7 @@ class Work extends React.Component {
   }
   render() {
     const { t, data } = this.props
-    console.log(data)
+    // console.log(data)
     return (
       <Layout>
         <Helmet>

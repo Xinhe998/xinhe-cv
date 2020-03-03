@@ -22,6 +22,7 @@ class MobileSidebar extends React.Component {
       this.setState({
         menuIsOpen: true,
       })
+      document.querySelector("body").classList.add("mobile_sidebar_open")
     } else {
       //close menu
       document.querySelector(".mobile_sidebar_content").classList.add("closing")
@@ -35,6 +36,7 @@ class MobileSidebar extends React.Component {
           .classList.remove("closing")
         document.getElementById("menuTogglerLabel").classList.remove("closing")
       }, 300)
+      document.querySelector("body").classList.remove("mobile_sidebar_open")
     }
   }
   componentDidMount() {
@@ -61,7 +63,10 @@ class MobileSidebar extends React.Component {
       (window.location.pathname.includes("works") ||
         window.location.pathname.includes("about"))
     return (
-      <div id="mobile_sidebar" className={`${this.state.menuIsOpen ? 'open': '' }`}>
+      <div
+        id="mobile_sidebar"
+        className={`${this.state.menuIsOpen ? "open" : ""}`}
+      >
         <input
           type="checkbox"
           id="menuToggler"
@@ -87,12 +92,59 @@ class MobileSidebar extends React.Component {
         <div className="mobile_sidebar_content">
           {this.state.isMobile && isInnerPage ? <Segment /> : null}
           <div className="button-container">
-            {isInnerPage ? <Link to="/">HOME</Link> : null}
-            <Link to="works">WORK</Link>
-            <Link to="about">ABOUT</Link>
+            {isInnerPage ? (
+              <Link
+                to="/"
+                onClick={() =>
+                  document
+                    .querySelector("body")
+                    .classList.remove("mobile_sidebar_open")
+                }
+              >
+                HOME
+              </Link>
+            ) : null}
+            <Link
+              to="works"
+              onClick={() =>
+                document
+                  .querySelector("body")
+                  .classList.remove("mobile_sidebar_open")
+              }
+              className={
+                typeof window !== "undefined" &&
+                window.location.pathname.includes("works")
+                  ? "active"
+                  : ""
+              }
+            >
+              WORK
+            </Link>
+            <Link
+              to="about"
+              onClick={() =>
+                document
+                  .querySelector("body")
+                  .classList.remove("mobile_sidebar_open")
+              }
+              className={
+                typeof window !== "undefined" &&
+                window.location.pathname.includes("about")
+                  ? "active"
+                  : ""
+              }
+            >
+              ABOUT
+            </Link>
             <a
               href="https://xinhehsu.com/xinhe-resume.pdf"
               target="_blank"
+              onClick={() => {
+                window.gtag("event", "Resume", {
+                  event_category: "button click",
+                  event_label: "resume",
+                })
+              }}
             >
               RESUME
             </a>

@@ -100,18 +100,20 @@ class About extends React.Component {
               <label className="pink">Vanilla js</label>
               <label className="pink">React</label>
               <label className="pink">Redux</label>
+              <label className="pink">Redux-Saga</label>
+              <label className="pink">Redux-Thunk</label>
               <label className="pink">jQuery</label>
             </div>
             <p>CSS</p>
             <div>
-              <label className="blue">SCSS</label>
+              <label className="blue">SASS/SCSS</label>
               <label className="blue">Atomic CSS</label>
             </div>
             <p>{t("web_back_end")}</p>
             <div>
               <label className="pink">Node.js</label>
               <label className="pink">Express.js</label>
-              <label className="pink">Socket.IO</label>
+              <label className="pink">WebSocket</label>
               <label className="pink">ASP.NET MVC</label>
             </div>
             <p>{t("database")}</p>
@@ -142,17 +144,20 @@ class About extends React.Component {
                     <p>
                       <Trans i18nKey="verizon_overview">
                         As a Front-End Engineer intern, I was responsible for
-                        participating
                         <a href="https://tw.youcard.yahoo.com" target="_blank">
                           {" "}
                           {t("yahoo_youcard")}{" "}
                         </a>{" "}
-                        project growth.
+                        project growth, and delivering a final presentation to
+                        colleagues.
                       </Trans>
                     </p>
                     <li>{t("verizon_dutie1")} </li>
                     <li>{t("verizon_dutie2")} </li>
                     <li>{t("verizon_dutie3")} </li>
+                    <li>{t("verizon_dutie4")} </li>
+                    <li>{t("verizon_dutie5")} </li>
+                    <li>{t("verizon_dutie6")} </li>
                   </ul>
                   <div className="image-hover img-zoom-in">
                     <Img
@@ -170,9 +175,10 @@ class About extends React.Component {
                 <div className="timeline-content">
                   Intern <b>@ {t("advantech")}</b>
                   <ul>
-                    <li>
-                      <Trans i18nKey="advantech_dutie1">
-                        Responsible for developing and maintaining 
+                    <p>
+                      <Trans i18nKey="advantech_overview">
+                        Within the 6-months internship, I mainly collaborated
+                        with the manager, and was responsible for
                         <a
                           href="https://wise-paas.advantech.com/en-us/marketplace"
                           target="_blank"
@@ -180,12 +186,15 @@ class About extends React.Component {
                           {" "}
                           {t("marketplace")}{" "}
                         </a>{" "}
-                        project with ASP.NETMVC5.
+                        project development and testing.
                       </Trans>
-                    </li>
+                    </p>
+                    <li>{t("advantech_dutie1")}</li>
                     <li>{t("advantech_dutie2")} </li>
                     <li>{t("advantech_dutie3")} </li>
                     <li>{t("advantech_dutie4")} </li>
+                    <li>{t("advantech_dutie5")} </li>
+                    <li>{t("advantech_dutie6")} </li>
                   </ul>
                   <div className="image-hover img-zoom-in">
                     <a
